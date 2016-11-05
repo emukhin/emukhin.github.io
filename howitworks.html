@@ -65,6 +65,12 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-<script src="js/core.min.js"></script>
+<script type="text/javascript">
+    jQuery(function(){
+        if (window.self != window.top) {
+            $(document.body).addClass("in-iframe");
+        }
+    });
+</script>
 </body>
 </html>
