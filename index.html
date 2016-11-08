@@ -62,8 +62,6 @@
                                     <p>Section below lets you specify the precise periods you would like to take a road test for DriveTest centers you pick.</p>
                                     <p>Location picker supports multiple selections. Create complex conditions by adding additional periods.</p>
                                     <p>All times are in the Eastern Time Zone.</p>
-                                    <!--<strong>e.g.</strong> You are able to take the test only before 12PM and after 3PM everyday in either Downsview or Port Union. Then you will need to add the 2nd period by pressing 'Add' button and select both locations for each dropdown list. Time controls should be filled in the following way: from: 2016-10-26 9:00 AM to: 2016-11-01 12:00 PM and from: 2016-10-26 3:00 PM to: 2016-11-01 6:00 PM. If we find cancellation for 2016-10-31 4:00 PM we will not reserve it for you since it is not fall into your wanted time-frame.-->
-
                                 </div>
                             </div>
                         </div>
@@ -169,12 +167,11 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$(this).parent().hide()">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <p class="text-center"><strong>Congratulations!</strong> Your order is successfully submitted. We will contact you once it's fulfilled..</p>
+                                    <p class="text-center"><strong>Congratulations!</strong> Your order is successfully submitted. We will contact you once it's fulfilled.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="text-center text-danger">Service does not work yet. Do not use it!</div>
                             <div class="checkbox small form-group col-xs-4 col-xs-offset-4">
                                 <label><input type="checkbox" required value="" data-validation-error-msg="You must agree to our Terms of Service">Check here to indicate that you have read <a href="howitworks.html">how it works</a> and agree to pay $40 CAD invoice after we book your road test.</label>
                             </div>
@@ -205,5 +202,13 @@
 <script src="js/jquery.mask.min.js"></script>
 <script src="js/jquery.datetimepicker.full.min.js"></script>
 <script src="js/core.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-87014719-1', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
 </html>
