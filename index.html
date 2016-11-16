@@ -37,20 +37,24 @@
                     <p>With our fully automated booking service you may rest assured that you'll get booked for a date you want the same minute it's released on drivetest.ca website.</p>
                     <p>We are monitoring cancellations <i>real-time 24/7</i> and thus we guarantee that if we were unable to find a vacant time slot for you it just did not exist within the time you wanted.
                     However, you are safe to try because we do not charge you in this case.</p>
-                    <p><em>We only charge you $40 service fee (Taxes included) for successful bookings.</em> We don't book a new road test on your behalf in DriveTest, we change the existing one to a closer date if you need to get your licence sooner and don't have time for hunting time slots by yourself. Once again our service is not required to get your licence. Please read <a href="howitworks.html">How it Works</a> section for details.</p>
+                    <p><em>We only charge you $40 service fee (Taxes included) for successful bookings.</em> Please read <a href="howitworks.html">How it Works</a> section for details.</p>
                 </div>
                 <div class="order-form">
                     <form role="form" method="post" name="driverInfo" id="driverInfo" novalidate>
                         <div class="row">
-                            <div class="form-group col-xs-4">
+                            <div class="form-group col-xs-3 licenceNumber">
                                 <label for="licenceNumber">Driver's Licence Number</label>
                                 <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
                             </div>
-                            <div class="form-group col-xs-4">
+                            <div class="form-group col-xs-3 licenceExpiryDate">
                                 <label for="licenceExpiryDate">Driver's Licence Expiry</label>
                                 <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}[-]?[0-9]{2}[-]?[0-9]{2}$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
                             </div>
-                            <div class="form-group col-xs-4">
+                            <div class="form-group col-xs-3 class">
+                                <label for="class">Road Test Class</label>
+                                <input type="text" id="class" placeholder="G2" required class="form-control" autocomplete="off" data-validation-error-msg="What class of road test would you like to book?">
+                            </div>
+                            <div class="form-group col-xs-3 email">
                                 <label for="email">Driver's email</label>
                                 <div class="input-group">
                                     <span class="input-group-addon">@</span>
@@ -61,7 +65,7 @@
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <div id="info" class="alert alert-info small" role="alert">
-                                    <p>Section below lets you specify the precise periods you would like to take a road test for DriveTest centers you pick.</p>
+                                    <p>Section below lets you specify the precise periods you would like to take a road test for DriveTest centres you pick.</p>
                                     <p>Location picker supports multiple selections. Create complex conditions by adding additional periods.</p>
                                     <p>All times are in the Eastern Time Zone.</p>
                                 </div>
@@ -69,8 +73,8 @@
                         </div>
                         <div class="row period">
                             <div class="col-xs-12 form-inline">
-                                <div class="form-group">
-                                    <select id="locationPicker" class="selectpicker form-control" required multiple title="Select DriveTest Centers" data-size="15" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                                <div class="form-group margin-right">
+                                    <select id="locationPicker" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="15" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
                                         <option>Bancroft</option>
                                         <option>Barrie</option>
                                         <option>Belleville</option>
@@ -136,15 +140,15 @@
                                         <option>Woodstock</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group margin-right">
                                     <label for="dateTimePickerFrom" class="sr-only">From</label>
                                     <input id="dateTimePickerFrom" autocomplete="off" placeholder="from" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select start date">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group margin-right">
                                     <label for="dateTimePickerTo" class="sr-only">To</label>
                                     <input id="dateTimePickerTo" autocomplete="off" placeholder="to" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select end date">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group margin-right">
                                     <button id="addPeriod" type="button" class="btn btn-default form-control" title="Add another period">Add</button>
                                     <button id="removePeriod" type="button" class="btn btn-default form-control hidden" title="Add another period">Remove</button>
                                 </div>
