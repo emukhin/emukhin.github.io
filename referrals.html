@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book road test | Ontario - Referrals</title>
+    <link rel="alternate" href="https://bookroadtest.ca/" hreflang="x-default" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/theme.css"/>
+    <link rel="icon" href="images/favicon.png">
+    <script async type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="shadow">
+        <img class="head" src="images/Ontario_drivers_licence.png" alt="Ontario Driver's Licence Permis de conduire">
+        <div class="site-content-wrapper">
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#" title="Book Road Test">Book Road Test</a></li>
+                        <li><a href="howitworks.html">How it Works</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="intro">
+                <h1>Want to book your road test in Ontario to an earlier date?<br>You are in the right place.</h1>
+                <p>With our fully automated booking service you may rest assured that you'll get booked for a date you want the same minute it's released on drivetest.ca website.</p>
+                <p>We are monitoring cancellations <i>real-time 24/7</i> and thus we guarantee that if we were unable to find a vacant time slot for you it just did not exist within the time you wanted.
+                    However, you are safe to try because we do not charge you in this case.</p>
+                <p><em>We only charge you $40 service fee (Taxes included) for successful bookings.</em> Please read <a href="howitworks.html">How it Works</a> section for details.</p>
+            </div>
+            <div class="order-form">
+                <form role="form" method="post" name="driverInfo" id="driverInfo" novalidate>
+                    <div class="row">
+                        <div class="form-group col-xs-3 licenceNumber">
+                            <label for="licenceNumber">Driver's Licence Number</label>
+                            <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
+                        </div>
+                        <div class="form-group col-xs-3 licenceExpiryDate">
+                            <label for="licenceExpiryDate">Driver's Licence Expiry</label>
+                            <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}[-]?[0-9]{2}[-]?[0-9]{2}$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
+                        </div>
+                        <div class="form-group col-xs-3 class">
+                            <label for="class">Road Test Class</label>
+                            <input type="text" id="class" placeholder="G2" required class="form-control" autocomplete="off" data-validation-error-msg="What class of road test would you like to book?">
+                        </div>
+                        <div class="form-group col-xs-3 email">
+                            <label for="email">Driver's email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input id="email" type="email" class="form-control" placeholder="name@email.com" required data-validation-error-msg="Email address is required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <div id="info" class="alert alert-info small" role="alert">
+                                <p>Section below lets you specify the precise periods you would like to take a road test for DriveTest centres you pick.</p>
+                                <p>Location picker supports multiple selections. Create complex conditions by adding additional periods.</p>
+                                <p>All times are in the Eastern Time Zone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row period">
+                        <div class="col-xs-12 form-inline">
+                            <div class="form-group margin-right">
+                                <select id="locationPicker" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="15" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                                    <option>Bancroft</option>
+                                    <option>Barrie</option>
+                                    <option>Belleville</option>
+                                    <option>Blind River</option>
+                                    <option>Brampton</option>
+                                    <option>Brantford</option>
+                                    <option>Brockville</option>
+                                    <option>Burlington</option>
+                                    <option>Chatham</option>
+                                    <option>Clinton</option>
+                                    <option>Collingwood</option>
+                                    <option>Cornwall</option>
+                                    <option>Dryden</option>
+                                    <option>Elliott Lake</option>
+                                    <option>Espanola</option>
+                                    <option>Fort Frances</option>
+                                    <option>Guelph</option>
+                                    <option>Hamilton</option>
+                                    <option>Hawkesbury</option>
+                                    <option>Hearst</option>
+                                    <option>Huntsville</option>
+                                    <option>Kapuskasing</option>
+                                    <option>Kenora</option>
+                                    <option>Kingston</option>
+                                    <option>Kirkland Lake</option>
+                                    <option>Kitchener</option>
+                                    <option>Lindsay</option>
+                                    <option>London</option>
+                                    <option>Marathon</option>
+                                    <option>Moosonee</option>
+                                    <option>New Liskeard</option>
+                                    <option>Newmarket</option>
+                                    <option>North Bay</option>
+                                    <option>Oakville</option>
+                                    <option>Orangeville</option>
+                                    <option>Orillia</option>
+                                    <option>Oshawa</option>
+                                    <option>Ottawa Canotek</option>
+                                    <option>Ottawa Walkley</option>
+                                    <option>Owen Sound</option>
+                                    <option>Parry Sound</option>
+                                    <option>Pembroke</option>
+                                    <option>Peterborough</option>
+                                    <option>Port Hope</option>
+                                    <option>Renfrew</option>
+                                    <option>Sarnia</option>
+                                    <option>Sault Ste Marie</option>
+                                    <option>Simcoe</option>
+                                    <option>Smiths Falls</option>
+                                    <option>St Catharines</option>
+                                    <option>Stratford</option>
+                                    <option>Sudbury</option>
+                                    <option>Thunder Bay</option>
+                                    <option>Tillsonburg</option>
+                                    <option>Timmins</option>
+                                    <option>Toronto Downsview</option>
+                                    <option>Toronto Etobicoke</option>
+                                    <option>Toronto Metro East</option>
+                                    <option>Toronto Port Union</option>
+                                    <option>Walkerton</option>
+                                    <option>Wawa</option>
+                                    <option>Windsor</option>
+                                    <option>Woodstock</option>
+                                </select>
+                            </div>
+                            <div class="form-group margin-right">
+                                <label for="dateTimePickerFrom" class="sr-only">From</label>
+                                <input id="dateTimePickerFrom" autocomplete="off" placeholder="from" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select start date">
+                            </div>
+                            <div class="form-group margin-right">
+                                <label for="dateTimePickerTo" class="sr-only">To</label>
+                                <input id="dateTimePickerTo" autocomplete="off" placeholder="to" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select end date">
+                            </div>
+                            <div class="form-group margin-right">
+                                <button id="addPeriod" type="button" class="btn btn-default form-control" title="Add another period">Add</button>
+                                <button id="removePeriod" type="button" class="btn btn-default form-control hidden" title="Add another period">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!--googleoff: all-->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="error" class="alert alert-danger collapse" role="alert">
+                                <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <p class="text-center"><strong>Error!</strong> Please, try again later or contact us.</p>
+                            </div>
+                            <div id="warning" class="alert alert-warning collapse" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$(this).parent().hide()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <p class="text-center"><strong>Warning!</strong> Your order is already being processed. Should you have any questions, please contact us.</p>
+                            </div>
+                            <div id="success" class="alert alert-success collapse" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$(this).parent().hide()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <p class="text-center"><strong>Congratulations!</strong> Your order is successfully submitted. We will contact you once it's fulfilled.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--googleon: all-->
+                    <div class="row">
+                        <div class="checkbox small form-group col-xs-4 col-xs-offset-4">
+                            <label><input type="checkbox" required value="" data-validation-error-msg="You must agree to our Terms of Service">Check here to indicate that you have read our rules and agree to pay $40 CAD invoice after we book your road test.</label>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <button id="submit" type="submit" data-loading-text="Submitting..." autocomplete="off" class="btn btn-md btn-block btn-success">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer text-center text-muted">
+                <span>Email us at</span>
+                <a href='mailto:info@bookroadtest.ca'>
+                    <script type="text/javascript">document.write('info@' + 'bookroadtest.ca')</script>
+                </a>
+                <div>&</div>
+                <span>Share your experience of using our service on <a href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png"></span>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
+<script src="js/core.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-87014719-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
