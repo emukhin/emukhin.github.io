@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book road test | Ontario</title>
+    <link rel="alternate" href="https://bookroadtest.ca/" hreflang="x-default" />
     <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css"/>
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
@@ -22,14 +24,32 @@
 <body>
     <div class="container">
         <div class="shadow">
-            <img class="head" src="images/Ontario_drivers_licence.png" alt="Ontario Driver's Licence Permis de conduire">
+            <div style="overflow: hidden" class="hidden-xs">
+                <div class="head-left">
+                    <img style="border-top-left-radius: 25px;" src="images/Ontario_drivers_licence_left.png" alt="Ontario Driver's Licence Permis de conduire">
+                </div>
+                <div class="head-right">
+                    <img style="border-top-right-radius: 25px;" src="images/Ontario_drivers_licence_right.png" alt="Ontario Driver's Licence Permis de conduire">
+                </div>
+                <div class="head-middle" style="height: 88px; background-image: url('images/Ontario_drivers_licence_center.png')"></div>
+            </div>
             <div class="site-content-wrapper">
                 <nav class="navbar navbar-default navbar-static-top">
                     <div class="container-fluid">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#" title="Book Road Test">Book Road Test</a></li>
-                            <li><a href="howitworks.html" title="How it Works">How it Works</a></li>
-                        </ul>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#" title="Book Road Test">Book Road Test</a></li>
+                                <li><a href="how-it-works.html" title="How it Works">How it Works</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
                 <div id="intro">
@@ -37,24 +57,28 @@
                     <p>With our fully automated booking service you may rest assured that you'll get booked for a date you want the same minute it's released on drivetest.ca website.</p>
                     <p>We are monitoring cancellations <i>real-time 24/7</i> and thus we guarantee that if we were unable to find a vacant time slot for you it just did not exist within the time you wanted.
                     However, you are safe to try because we do not charge you in this case.</p>
-                    <p><em>We only charge you $40 service fee (Taxes included) for successful bookings.</em> Please read <a href="howitworks.html">How it Works</a> section for details.</p>
+                    <p><em>We only charge you $40 service fee for successful bookings.</em> Please read <a href="how-it-works.html">How it Works</a> section for details.</p>
                 </div>
                 <div class="order-form">
                     <form role="form" method="post" name="driverInfo" id="driverInfo" novalidate>
                         <div class="row">
-                            <div class="form-group col-xs-3 licenceNumber">
+                            <div class="form-group col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-2 col-xs-8 col-xs-offset-2">
                                 <label for="licenceNumber">Driver's Licence Number</label>
                                 <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
                             </div>
-                            <div class="form-group col-xs-3 licenceExpiryDate">
+                            <div class="form-group hidden-lg hidden-md hidden-sm col-xs-1" style="height: 79px"></div>
+
+                            <div class="form-group col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2">
                                 <label for="licenceExpiryDate">Driver's Licence Expiry</label>
                                 <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}[-]?[0-9]{2}[-]?[0-9]{2}$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
                             </div>
-                            <div class="form-group col-xs-3 class">
+                            <div class="form-group hidden-lg hidden-md hidden-sm col-xs-1" style="height: 79px"></div>
+                            <div class="form-group col-md-2 col-md-offset-0 col-sm-2 col-sm-offset-0 col-xs-8 col-xs-offset-2">
                                 <label for="class">Road Test Class</label>
                                 <input type="text" id="class" placeholder="G2" required class="form-control" autocomplete="off" data-validation-error-msg="What class of road test would you like to book?">
                             </div>
-                            <div class="form-group col-xs-3 email">
+                            <div class="form-group hidden-lg hidden-md hidden-sm col-xs-1" style="height: 79px"></div>
+                            <div class="form-group col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
                                 <label for="email">Driver's email</label>
                                 <div class="input-group">
                                     <span class="input-group-addon">@</span>
@@ -66,13 +90,13 @@
                             <div class="form-group col-xs-12">
                                 <div id="info" class="alert alert-info small" role="alert">
                                     <p>Section below lets you specify the precise periods you would like to take a road test for DriveTest centres you pick.</p>
-                                    <p>Location picker supports multiple selections. Create complex conditions by adding additional periods.</p>
+                                    <p>Location picker supports multiple selections. <span class="hidden-sm hidden-xs">Create complex conditions by adding additional periods.</span></p>
                                     <p>All times are in the Eastern Time Zone.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row period">
-                            <div class="col-xs-12 form-inline">
+                            <div class="col-lg-6 col-sm-5">
                                 <div class="form-group margin-right">
                                     <select id="locationPicker" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="15" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
                                         <option>Bancroft</option>
@@ -140,6 +164,8 @@
                                         <option>Woodstock</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-7 form-inline">
                                 <div class="form-group margin-right">
                                     <label for="dateTimePickerFrom" class="sr-only">From</label>
                                     <input id="dateTimePickerFrom" autocomplete="off" placeholder="from" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select start date">
@@ -148,7 +174,7 @@
                                     <label for="dateTimePickerTo" class="sr-only">To</label>
                                     <input id="dateTimePickerTo" autocomplete="off" placeholder="to" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select end date">
                                 </div>
-                                <div class="form-group margin-right">
+                                <div class="form-group margin-right hidden-sm hidden-xs">
                                     <button id="addPeriod" type="button" class="btn btn-default form-control" title="Add another period">Add</button>
                                     <button id="removePeriod" type="button" class="btn btn-default form-control hidden" title="Add another period">Remove</button>
                                 </div>
@@ -180,10 +206,10 @@
                         </div>
                         <!--googleon: all-->
                         <div class="row">
-                            <div class="checkbox small form-group col-xs-4 col-xs-offset-4">
+                            <div class="checkbox small col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
                                 <label><input type="checkbox" required value="" data-validation-error-msg="You must agree to our Terms of Service">Check here to indicate that you have read our rules and agree to pay $40 CAD invoice after we book your road test.</label>
                             </div>
-                            <div class="col-xs-4 col-xs-offset-4">
+                            <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
                                 <button id="submit" type="submit" data-loading-text="Submitting..." autocomplete="off" class="btn btn-md btn-block btn-success">SUBMIT</button>
                             </div>
                         </div>
@@ -195,7 +221,7 @@
                         <script type="text/javascript">document.write('info@' + 'bookroadtest.ca')</script>
                     </a>
                     <div>&</div>
-                    <span>Share your experience of using our service on <a href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png"></span>
+                    <span itemscope itemtype="http://schema.org/Organization">Share your experience of using our service on <a itemprop="url" image="images/facebook.png" href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png"></span>
                 </div>
             </div>
             <div class="bottom"></div>
