@@ -35,7 +35,7 @@
                         <div class="navbar-header">
                             <div class="navbar-logo hidden-lg hidden-md hidden-sm">
                                 <img alt="Brand" src="images/ontario.png" width="40px">
-                                <span>Book a road test</span>
+                                <span>Book a Road Test</span>
                             </div>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">Toggle navigation</span>
@@ -46,55 +46,80 @@
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="#" title="Book Road Test">Book Road Test</a></li>
-                                <li><a href="how-it-works.html" title="How it Works">How it Works</a></li>
+                                <li class="active"><a href="#" title="Book Road Test">Book a Road Test</a></li>
+                                <li><a href="how-it-works.html" title="How it Works">How It Works</a></li>
+                                <li><a href="faq.html" title="FAQs">FAQs</a></li>
+                                <li><a href="affiliate.html" title="Earn With Us">Earn With Us</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <div id="intro">
-                    <h1>Want to book your road test in Ontario to an earlier date?<br>You are in the right place.</h1>
-                    <p>With our fully automated booking service you may rest assured that you'll get booked for a date you want the same minute it's released on drivetest.ca website.</p>
-                    <p>We are monitoring cancellations <i>real-time 24/7</i> and thus we guarantee that if we were unable to find a vacant time slot for you it just did not exist within the time you wanted.
-                    However, you are safe to try because we do not charge you in this case.</p>
-                    <p><em>We only charge you $40 service fee for successful bookings.</em> Please read <a href="how-it-works.html">How it Works</a> section for details.</p>
+                <div class="margin-bottom">
+                    <h1>Want to book your Ontario road test to an earlier date?</h1>
+                    <h2>Use the only booking service that’s free to try. You don’t pay unless we book a road test when you want it, where you want it.</h2>
+                    <p>Many road test centres are fully booked for months in advance. If you need your license sooner, your only hope is to snap up a cancellation when it becomes available. But these openings don’t last long, and you can’t spend all of your time refreshing the DriveTest.ca appointment finder.</p>
+                    <p>Our unique software monitors cancellations in real-time, 24/7. We’re constantly searching for openings, day and night, and we book your driver’s test appointment the moment a slot that fits your request becomes available.</p>
+                    <p>BookRoadTest.ca is free to try, <em>unlike</em> other road test booking services.</p>
+                    <p>Our competitors charge a non-refundable fee upfront, and if they can’t find the appointment you want, they book whatever date, time and location their system selects.</p>
+                    <p>When you book through our site, you only pay our $40 plus HST service fee if we find a booking that falls within your requested dates, at your preferred location.</p>
+                    <p>Save time and money by using our free-to-try booking service.</p>
+
+                    <p>Read <a href="how-it-works.html">How It Works</a> and our <a href="faq.html">FAQs</a> to learn more about our best-in-class road test booking service.</p>
+                    <br/>
+                    <h2>Try it Now!</h2>
                 </div>
                 <div class="order-form">
                     <form role="form" method="post" name="driverInfo" id="driverInfo" novalidate>
+                        <h3 id="start">First, provide your data before booking.</h3>
+                        <p class="small">Enter your license and contact info here, safely and securely.</p>
+                        <br/>
                         <div class="row hints">
-                            <div class="form-group col-md-3 col-sm-5 col-xs-12">
-                                <label for="licenceNumber">Driver's Licence Number</label>
-                                <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
-                            </div>
-                            <!--<div class="form-group hidden-lg hidden-md hidden-sm col-xs-1" style="height: 79px"></div>-->
-
-                            <div class="form-group col-md-3 col-sm-4 col-xs-12">
-                                <label for="licenceExpiryDate">Driver's Licence Expiry</label>
-                                <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}[-]?[0-9]{2}[-]?[0-9]{2}$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
-                            </div>
-                            <!--<div class="form-group hidden-lg hidden-md hidden-sm col-xs-1" style="height: 79px"></div>-->
-                            <div class="form-group col-md-2 col-sm-3 col-xs-12">
-                                <label for="class">Road Test Class</label>
-                                <input type="text" id="class" placeholder="G2" required class="form-control" autocomplete="off" data-validation-error-msg="What class of road test would you like to book?">
-                            </div>
-                            <!--<div class="form-group hidden-lg hidden-md hidden-sm col-xs-1" style="height: 79px"></div>-->
-                            <div class="form-group col-md-4 col-sm-12 col-xs-12">
-                                <label for="email">Driver's email</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">@</span>
-                                    <input id="email" type="email" class="form-control" placeholder="name@email.com" required data-validation-error-msg="Email address is required">
+                            <div class="col-sm-12">
+                                <div class="row" style="display: flex; align-items: center; ">
+                                    <div class="col-sm-8">
+                                        <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                                            <label for="licenceNumber">Driver's Licence Number</label>
+                                            <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
+                                        </div>
+                                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                                            <label for="licenceExpiryDate">Driver's Licence Expiry</label>
+                                            <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}[-]?[0-9]{2}[-]?[0-9]{2}$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
+                                        </div>
+                                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                                            <label for="class">Road Test Class</label>
+                                            <input type="text" id="class" placeholder="G2" required class="form-control" autocomplete="off" data-validation-error-msg="What class of road test would you like to book?">
+                                        </div>
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <label for="email">Driver's email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">@</span>
+                                                <input id="email" type="email" class="form-control" placeholder="name@email.com" required data-validation-error-msg="Email address is required">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 hidden-xs">
+                                        <ul id="bullets">
+                                            <li>Risk-Free: Only Pay if You Get the Booking You Requested</li>
+                                            <li>Straightforward and Simple</li>
+                                            <li>Works 24/7 to Find Your Ideal Road Test</li>
+                                            <li>Searches All Ontario Road Test Locations</li>
+                                            <li>Safe and Secure</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <h3>Next, tell us where and when you want to take your road test.</h3>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <div id="info" class="alert alert-info small" role="alert">
-                                    <p>Section below lets you specify the precise periods you would like to take a road test for DriveTest centres you pick.</p>
-                                    <p>Location picker supports multiple selections. <span class="hidden-sm hidden-xs">Create complex conditions by adding additional periods.</span></p>
+                                <div class="small">
+                                    <p>Using the fields below, choose your prefered DriveTest centre location(s). Then choose the time period<span class="hidden-sm hidden-xs">(s)</span> within which you would like to take a road test.</p>
+                                    <p class="hidden-sm hidden-xs">Our system can handle your most complex scheduling needs. Be as specific as you like by adding multiple time periods. Choose one or many locations to increase your odds of finding an early booking.</p>
                                     <p>All times are in the Eastern Time Zone.</p>
                                 </div>
                             </div>
                         </div>
+
                         <div class="row period">
                             <div class="col-lg-6 col-sm-5">
                                 <div class="form-group margin-right">
@@ -180,7 +205,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
                         <!--googleoff: all-->
                         <div class="row">
                             <div class="col-xs-12">
@@ -207,21 +231,20 @@
                         <!--googleon: all-->
                         <div class="row">
                             <div class="checkbox small col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                                <label><input type="checkbox" required value="" data-validation-error-msg="You must agree to our Terms of Service">Check here to indicate that you have read our rules and agree to pay $40 CAD invoice after we book your road test.</label>
+                                <label><input type="checkbox" required value="" data-validation-error-msg="You must agree to our Terms of Service">Check here to indicate that you have read our conditions and agree to pay CAD $40 plus HST after we book your requested road test.</label>
                             </div>
                             <div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                                <button id="submit" type="submit" data-loading-text="Submitting..." autocomplete="off" class="btn btn-md btn-block btn-success">SUBMIT</button>
+                                <button id="submit" type="submit" data-loading-text="Submitting..." autocomplete="off" class="btn btn-md btn-block btn-success">Find My Road Test</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="footer text-center text-muted">
+                    <hr>
                     <span>Email us at</span>
-                    <a href='mailto:info@bookroadtest.ca'>
-                        <script type="text/javascript">document.write('info@' + 'bookroadtest.ca')</script>
-                    </a>
-                    <div>&</div>
-                    <span itemscope itemtype="http://schema.org/Organization">Share your experience of using our service on <a itemprop="url" image="images/facebook.png" href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png" alt="facebook"></span>
+                    <a href='mailto:info@bookroadtest.ca'><script type="text/javascript">document.write("info@" + "bookroadtest.ca")</script></a>
+                    <span>with questions &</span>
+                    <div itemscope itemtype="http://schema.org/Organization">Share your success on <a itemprop="url" image="images/facebook.png" href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png" alt="facebook"> for a chance to book your road test free.</div>
                 </div>
             </div>
             <div class="bottom"></div>

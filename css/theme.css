@@ -20,11 +20,34 @@ h1 {
     line-height: 1.3;
 }
 
+h2 {
+    font-size: 18px !important;
+    color: #003479;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 16px !important;
+    color: #003479;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
 h4 {
     color: #003479;
     font-weight: 600;
     line-height: 1.3;
     margin-top: 30px;
+}
+
+#bullets {
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+#bullets li {
+    padding: 1px;
 }
 
 .site-content-wrapper {
@@ -35,6 +58,12 @@ h4 {
 
 .container {
     padding: 10px !important;
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+    .hints .form-group {
+        height: 88px !important;
+    }
 }
 
 @media all and (min-width: 768px) {
@@ -59,7 +88,8 @@ h4 {
         margin-right: 456px;
     }
     .navbar {
-            background-image: url("../images/Permis_de_conduire.png");
+        background-image: url("../images/Permis_de_conduire.png");
+        background-position: right;
     }
     .datetimepicker {
         width: 175px !important;
@@ -71,11 +101,6 @@ h4 {
 
 .period {
     margin-bottom: 5px;
-}
-
-#info {
-    margin-top: 20px;
-    margin-bottom: 0px !important;
 }
 
 .bottom {
@@ -118,6 +143,10 @@ h4 {
     background-color: rgba(100, 134, 165, 0.3) !important;
 }
 
+#getRefLink {
+    margin-top: 10px;
+}
+
 .shadow {
     background-color: #e9ebee;
     box-shadow: 5px 5px 10px #999, -5px 5px 15px #999;
@@ -126,9 +155,13 @@ h4 {
     border-radius: 25px;
 }
 
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
 .footer {
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 35px;
 }
 
 form .form-control::-moz-placeholder {
@@ -149,10 +182,5 @@ form .form-control::-webkit-input-placeholder {
 }
 
 .hints .form-group {
-    height: 70px;
+    height: 68px;
 }
-
-#intro {
-    margin-bottom: 40px;
-}
-
