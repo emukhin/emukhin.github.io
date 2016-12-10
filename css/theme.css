@@ -156,11 +156,15 @@ h4 {
 }
 
 .margin-bottom {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .fb-comments span {
     margin-top: 20px;
+}
+
+.alert {
+    margin-bottom: 0 !important;
 }
 
 .footer {
