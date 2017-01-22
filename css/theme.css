@@ -192,3 +192,11 @@ form .form-control::-webkit-input-placeholder {
 .hints .form-group {
     height: 68px;
 }
+
+.government_fee {
+    float: right;
+}
+
+.strikedout {
+    text-decoration: line-through;
+}

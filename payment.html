@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book road test | Ontario - How it Works</title>
+    <title>Book road test | Ontario - Payment authorization</title>
     <script>
         /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
         (function(w){
@@ -142,6 +142,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="icon" href="images/favicon.png">
+    <!-- Load the required components. -->
+    <script src="https://js.braintreegateway.com/web/3.6.3/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.6.3/js/paypal.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -157,7 +160,7 @@
                         <div class="navbar-header">
                             <div class="navbar-logo hidden-lg hidden-md hidden-sm">
                                 <img alt="Brand" src="images/ontario.png" width="40px">
-                                <span>How It Works</span>
+                                <span>FAQs</span>
                             </div>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">Toggle navigation</span>
@@ -168,48 +171,74 @@
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.htm" title="Book Road Test">Book a Road Test</a></li>
-                                <li class="active"><a href="#" title="How it Works">How It Works</a></li>
-                                <li><a href="faq.htm" title="FAQs">FAQs</a></li>
-                                <li><a href="affiliate.htm" title="Earn With Us">Earn With Us</a></li>
+                                <li><a href="index.html" title="Book Road Test">Book a Road Test</a></li>
+                                <li><a href="how-it-works.html" title="How it Works">How It Works</a></li>
+                                <li><a href="faq.html" title="FAQs">FAQs</a></li>
+                                <li><a href="affiliate.html" title="Earn With Us">Earn With Us</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <div>
-                    <h2>The faster, easier, less expensive way to book your road test</h2>
-                    <p>Taking a road test is stressful, and we want to help you get through it quicker, with less hassle and at a lower cost. That's why we created an automated 24/7 service to <strong>find the the nearest cancellation date for your road test.</strong></p>
-                    <p>We are <strong>not affiliated with either the Ministry of Transportation or the DriveTest centres.</strong> Their booking system can't provide preferential service to customers who need their license faster.</p>
-                    <p>Our service gives you an edge over the thousands of others looking to book a convenient road test, and we do it at a reasonable price with the guarantee that you only pay if you get the booking you requested.</p>
-                    <h2>Before you book your road test with us, please check:</h2>
-                    <ol>
-                        <li>Are your Ministry of Transportation <strong>road test fees prepaid?</strong> Paying these fees makes you eligible to book a road test and is an essential step before using our service. Wonder <a target="_blank" href="https://www.facebook.com/bookroadtest/posts/357949864568629">why?</a></li>
-                        <li>Can you <strong>access your DriveTest dashboard</strong> on the <a rel="noreferrer" target="_blank" href="https://www.drivetest.ca/book-a-road-test/booking.html#/verify-driver">drivetest.ca</a> website? The dashboard is where you can view and edit all information related to your road test bookings.</li>
-                    </ol>
-                    <p>If you've answered yes to both, you're ready to book your road test by filling in your license information, email and selecting your preferred road test location(s), date(s) and time(s).*</p>
-                    <p><a href="index.htm#start">Get started</a> or read our <a href="faq.htm" title="FAQs">FAQs</a> for more information</p>
-                    <p class="text-muted small">*Your personal data such as Driver's Licence Number, Driver's Licence Expiry, Driver's email will not be used for any other purposes besides rescheduling your road test.</p>
-                    <h2>What happens next?</h2>
-                    <p>Once you submit your request and secure it via PayPal, our fast, automated system begins searching on your behalf. When we find an appointment that fits your criteria, we book it instantly. It's the fastest way to book a road test the moment an opening becomes available.</p>
-                    <p>If we can't find the booking you requested, it's because that appointment simply wasn't available.</p>
-                    <p>Our search for your drive test booking stops 24 hours before your latest requested appointment. If the last date in your date range was May 20th, then our search will stop on May 19th. We offer this automated cancellation because we know our customers can't always change their plans at the last moment to take a road test. However, up until 24 hours before your latest requested road test date and time, you should be prepared to receive notification of a booking. Keep your calendar open for those times you've requested!</p>
-                    <p>All requests are processed on a first come, first serve basis. If another customer requested the same location and time period even a minute before you submitted your request, you'll be second in line.</p>
-                    <p>When we've successfully booked your road test, you'll be notified of the new appointment via email from DriveTest. You'll also automatically pay the service fee of $40 plus HST, via PayPal.</p>
-                    <p>If we are unable to find a date and time you requested at your preferred location(s), you'll be notified free of charge. There is no fee whatsoever unless we find your ideal road test booking.</p>
-                    <p>More questions on our search process? Read our <a href="faq.htm" title="FAQs">FAQs</a>.</p>
-                    <h2>If you change your mind</h2>
-                    <p>Should your plans change, simply email us as soon as possible and we'll cancel your order with no charge. If your requested appointment has already been booked, we can't offer a refund, but we can help you reschedule to another date.</p>
-                    <p>Find more information on cancellations in our <a href="faq.htm" title="FAQs">FAQs</a>.</p>
+                <div style="margin-bottom: -35px">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1>Congratulations! We have received your order.</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+                            <b>We'll get started processing as soon as you authorize the payment.</b>
+                        </div>
+                    </div>
                     <br/>
-                    <span>Ready to book your road test? <a href="index.htm#start">Get started</a></span>
+                    <br/>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <p>Your request was as follows:</p>
+                            <ul class="request"></ul>
+                        </div>
+                    </div>
+                    <div class="row receipt">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <hr/>
+                            <div>Booking fee:<span style="float: right">$40 CAD</span></div>
+                            <div>HST:<span style="float: right">$5.20 CAD</span></div>
+                            <div id="government_fee_g2" class="hidden">Gvnmt G2 road test fee<sup>*</sup>:<span class="government_fee">$52.50 CAD</span></div>
+                            <div id="government_fee_g" class="hidden">Gvnmt G road test fee<sup>*</sup>:<span class="government_fee">$89.25 CAD</span></div>
+                            <div><b>Total Due:</b><span style="float: right"><b id="total">$45.20 CAD</b></span></div>
+                            <div id="paid" class="hidden">
+                                <br/>
+                                <span><sup><strong>*</strong></sup> <small>If you're 100% sure that your Government fee is already paid click the link: <a role="button" id="government_fee_paid" href="javascript:void(0);"><strong>my Government fee is paid</strong></a>. Otherwise, leave it, we won't charge you if it's paid anyway.</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row margin-bottom">
+                        <div class="checkbox text-center">
+                            <small>You can use your PayPal account, Visa, MasterCard, Discover or American Express credit cards.</small>
+                        </div>
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <button id="paypal-button" type="submit" data-loading-text="Processing..." class="btn btn-md btn-block btn-success">Authorize payment</button>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-sm-8 col-sm-offset-2" style="border: 1px solid #bdc3c7; padding: 20px">
+                            <p>You may be wondering why you need to authorize payment if we promise not to charge you until you're booked.</p>
+                            <p>In the past, we requested payment after we secured a customer's road test. Unfortunately, many didn't pay.</p>
+                            <p>Now, we ask that customers authorize the payment before we start searching. It means we can get paid when you get booked - and not a moment sooner.</p>
+                            <p>When you click the green button above, it looks exactly like a payment, but it's not. You won't see a transaction in your bank account until we book your requested road test. At that point, the transaction is automatic.</p>
+                        </div>
+                    </div>
+                    <div class="text-center hidden-xs">
+                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" style="margin-top: 35px;" border="0" alt="PayPal Acceptance Mark">
+                    </div>
                 </div>
-
                 <div class="footer text-center text-muted">
                     <hr>
                     <span>Email us at</span>
                     <a href='mailto:info@bookroadtest.ca'>info@bookroadtest.ca</a>
                     <span>with questions &</span>
-                    <div itemscope itemtype="http://schema.org/Organization">Share your success on <a itemprop="url" image="images/facebook.png" target="_blank" href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png" alt="facebook"> for a chance to book your road test free.</div>
+                    <div itemscope itemtype="http://schema.org/Organization">Share your success on <a itemprop="url" target="_blank" href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png" alt="facebook"> for a chance to book your road test free.</div>
                 </div>
             </div>
             <div class="bottom"></div>
@@ -217,15 +246,10 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        jQuery(function(){
-            if (window.self != window.top) {
-                $(document.body).addClass("in-iframe");
-            }
-        });
+            crossorigin="anonymous">
     </script>
+    <script src="js/payment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
