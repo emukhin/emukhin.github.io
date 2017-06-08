@@ -3,6 +3,7 @@ body {
     font-size: 14px;
     color: #474747;
     background-color: #e9ebee !important;
+    max-width:100%;
 }
 
 body.in-iframe {
@@ -137,6 +138,8 @@ h4 {
 .navbar a {
     color: rgb(36, 71, 117) !important;
     font-weight: 600;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
 .navbar li:hover:not(.active) {
