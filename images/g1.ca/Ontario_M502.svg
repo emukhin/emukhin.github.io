@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="511.95312" height="511.99219" viewBox="0 0 1444.8453 1444.9558" id="svg2">
+<metadata id="metadata62">
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+<dc:title></dc:title>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<defs id="defs60">
+<clipPath id="clipPath3564">
+<path d="m 63,43 512.622,0 0,313.129 L 63,356.129 63,43 z" id="path3566" />
+</clipPath>
+<clipPath id="clipPath8513">
+<path d="m 129.065,349.845 101.149,0 0,100.843 -101.149,0 0,-100.843 z" id="path8515" />
+</clipPath>
+<clipPath id="clipPath3571">
+<path d="m 68.296,412.876 222.853,0 0,112.641 -222.853,0 0,-112.641 z" id="path3573" />
+</clipPath>
+</defs>
+<polygon points="315,205 395,375 315,545 235,375 " transform="translate(26111.587,6444.7479)" id="polygon10" style="fill:none;stroke:#ffffff;stroke-width:40" />
+<g transform="matrix(1.7365434,0,0,1.7359515,-2303.2972,-932.08613)" id="g3150">
+<g transform="translate(80.0605,75.1086)" id="g3152">
+<g transform="matrix(2.0314943,0,0,-2.032187,-69.465167,56.020032)" id="g9005">
+<path d="m 1056.2201,-585.60652 c 0,-12.50659 -10.1335,-22.64055 -22.6354,-22.64055 l -362.23318,0 c -12.50196,0 -22.63986,10.13396 -22.63986,22.64055 l 0,362.24431 c 0,12.50658 10.1379,22.64054 22.63986,22.64054 l 362.23318,0 c 12.5019,0 22.6354,-10.13396 22.6354,-22.64054 l 0,-362.24431 z" id="path5608" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.0745914;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+<path d="m 1047.1685,-585.60652 c 0,-7.50142 -6.0827,-13.58434 -13.5838,-13.58434 l -362.23743,0 c -7.50115,0 -13.57962,6.08292 -13.57962,13.58434 l 0,362.24855 c 0,7.50142 6.07847,13.58434 13.57962,13.58434 l 362.23743,0 c 7.5011,0 13.5838,-6.08292 13.5838,-13.58434 l 0,-362.24855 z" id="path5620" style="fill:#00674e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+<path d="m 852.47404,-566.16294 5.84845,11.13072 61.51306,-16.98789 0,21.6736 -51.55408,41.00853 c 4.10627,2.34289 4.68984,36.3186 4.68984,36.3186 l 0,50.95932 c 5.26911,1.75925 32.21543,-6.44504 32.21543,-6.44504 l 119.78876,-53.88998 0,30.46141 -42.46405,33.39211 0,39.24505 -23.43214,0 0,-21.6736 -22.84427,14.64072 0,39.25358 -21.67289,0 0,-21.67784 -41.00728,28.70214 0,51.55567 c 0,0 -3.51418,52.13073 -20.50151,51.54717 l -1.17139,0 c -16.98309,0.58356 -20.49728,-51.54717 -20.49728,-51.54717 l 0,-51.55567 -41.0115,-28.70214 0,21.67784 -21.67293,0 0,-39.25358 -22.84004,-14.64072 0,21.6736 -23.43636,0 0,-39.24505 -42.46408,-33.39211 0,-30.46141 119.78877,53.88998 c 0,0 26.94631,8.20429 32.21971,6.44504 l 0,-50.95932 c 0,0 0.58785,-33.97571 4.68132,-36.3186 l -51.54557,-41.00853 0,-21.6736 61.5088,16.98789 5.86123,-11.13072" id="path5626" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+</g>
+</g>
+</g>
+</svg>
