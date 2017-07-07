@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book a road test | Ontario - Knowledge test (G1)</title>
+    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="css/theme1.css">
+    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="css/funkyradio.css">
+    <script>
+        /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+        (function(w){
+            "use strict";
+            /* exported loadCSS */
+            var loadCSS = function( href, before, media ){
+                // Arguments explained:
+                // `href` [REQUIRED] is the URL for your CSS file.
+                // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+                    // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+                // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+                var doc = w.document;
+                var ss = doc.createElement( "link" );
+                var ref;
+                if( before ){
+                    ref = before;
+                }
+                else {
+                    var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+                    ref = refs[ refs.length - 1];
+                }
+
+                var sheets = doc.styleSheets;
+                ss.rel = "stylesheet";
+                ss.href = href;
+                // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+                ss.media = "only x";
+
+                // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+                function ready( cb ){
+                    if( doc.body ){
+                        return cb();
+                    }
+                    setTimeout(function(){
+                        ready( cb );
+                    });
+                }
+                // Inject link
+                    // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+                    // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+                ready( function(){
+                    ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+                });
+                // A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+                var onloadcssdefined = function( cb ){
+                    var resolvedHref = ss.href;
+                    var i = sheets.length;
+                    while( i-- ){
+                        if( sheets[ i ].href === resolvedHref ){
+                            return cb();
+                        }
+                    }
+                    setTimeout(function() {
+                        onloadcssdefined( cb );
+                    });
+                };
+
+                function loadCB(){
+                    if( ss.addEventListener ){
+                        ss.removeEventListener( "load", loadCB );
+                    }
+                    ss.media = media || "all";
+                }
+
+                // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+                if( ss.addEventListener ){
+                    ss.addEventListener( "load", loadCB);
+                }
+                ss.onloadcssdefined = onloadcssdefined;
+                onloadcssdefined( loadCB );
+                return ss;
+            };
+            // commonjs
+            if( typeof exports !== "undefined" ){
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }( typeof global !== "undefined" ? global : this ));
+
+        /*! CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT  */
+        (function( w ){
+          // rel=preload support test
+          if( !w.loadCSS ){
+            return;
+          }
+          var rp = loadCSS.relpreload = {};
+          rp.support = function(){
+            try {
+              return w.document.createElement( "link" ).relList.supports( "preload" );
+            } catch (e) {
+              return false;
+            }
+          };
+
+          // loop preload links and fetch using loadCSS
+          rp.poly = function(){
+            var links = w.document.getElementsByTagName( "link" );
+            for( var i = 0; i < links.length; i++ ){
+              var link = links[ i ];
+              if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+                w.loadCSS( link.href, link );
+                link.rel = null;
+              }
+            }
+          };
+
+          // if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
+          if( !rp.support() ){
+            rp.poly();
+            var run = w.setInterval( rp.poly, 300 );
+            if( w.addEventListener ){
+              w.addEventListener( "load", function(){
+                w.clearInterval( run );
+              } );
+            }
+            if( w.attachEvent ){
+              w.attachEvent( "onload", function(){
+                w.clearInterval( run );
+              } )
+            }
+          }
+        }( this ));
+
+    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="icon" href="images/favicon.png">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="shadow">
+            <div style="overflow: hidden" class="hidden-xs">
+                <div class="head-left"></div>
+                <div class="head-right"></div>
+                <div class="head-middle"></div>
+            </div>
+            <div class="site-content-wrapper">
+                <nav class="navbar navbar-default navbar-static-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-logo hidden-lg hidden-md hidden-sm">
+                                <img alt="Brand" src="images/ontario.png" width="40px">
+                                <span>G1 Test</span>
+                            </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#" title="Knowledge Test (G1)">Knowledge Test</a></li>
+                                <li><a href="index.html" title="Book a Driving Test (G2, G, A etc.)">Book a Road Test</a></li>
+                                <li><a rel="nofollow" href="how-it-works.html" title="How it Works">How It Works</a></li>
+                                <li><a rel="nofollow" href="faq.html" title="FAQs">FAQs</a></li>
+                                <li><a rel="nofollow" href="affiliate.html" title="Earn With Us">Earn With Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="text-center bottom-30">
+                    <h1>Be Prepared for the 2017 Ontario G1 Road Test</h1>
+                    <h2>Study with our Free Online Quiz Based on the Official MTO Driver's Handbook Questions</h2>
+                </div>
+                <div>
+                    <p>If you want to pass your G1 written road test, use our free test prep quiz to prepare.</p>
+                    <p>Our practice test is derived directly from the official 2017 MTO Driver's Handbook and all questions are completely up-to-date.</p>
+                    <p> There's no need to enter your information or register <a href="#g1"><strong>Just get started!</strong></a></p>
+                    <h3>What Is the G1 Test & Why You Need It</h3>
+                    <p>To begin the process of becoming a licensed driver in Ontario, you must pass the G1 knowledge test. The official test is offered by the Ministry of Transportation at DriveTest Centres across the province.</p>
+                    <p>After passing the written G1 exam, you have one year to study for the G2 road test. To avoid hassle and delay, you can book your G2 driving test directly through our <a href="/">site.</a></p>
+                    <p>Our road test booking site is perfect for learners, because by using our service, you're more likely to get the test date you want exactly when you're ready to take it. Keep that in mind as you prep for your G1 exam!</p>
+                    <h3>How Our G1 Prep Quiz Works</h3>
+                    <p>When you take our G1 road test prep quiz, you'll answer 40 random multiple choice questions. There are 20 questions on road rules and 20 questions on road signs.</p>
+                    <p>The required score to pass the MTO G1 test is 80%, and it's the same for our mock exam. To pass, you must answer 32 questions correctly: 16 out of 20 in each section, road rules and signs respectively.</p>
+                    <p>Every time you take the test, you'll face a new set of random questions.</p>
+                    <p>You can take our G1 prep quiz as many times as you like. In fact, we encourage you to repeat the quiz until you can get all the answers correct, each time.</p>
+                    <h3>Why This is the Only G1 Mock Test You Need</h3>
+                    <p>Unlike other G1 road test prep sites, you don't need to guess which mock test on our site to take. We've included all simulated G1 exam questions in our one quiz.</p>
+                    <p>If you can pass this mock G1 exam, chances are good that you'll pass the real thing with flying colours!</p>
+                    <p>Plus, our quiz is ad-free, so you can focus on what matters - preparing for your G1 written test, without distraction.</p>
+                </div>
+                <div class="row text-center testimonial">
+                    <div class="col-md-4 col-md-offset-4">
+                        <p><em>"You have to take this test if you want to pass the G1! The questions can be hard - even for licensed drivers - but very clear and totally accurate. If you can pass this, you deserve to be driving."</em></p>
+                        <p>- Anna O. -</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <strong>Ready to test your G1 knowledge?</strong>
+                </div>
+                <div id="g1"></div>
+                <div class="row top-30">
+                    <div class="col-md-4 col-md-offset-4">
+                        <button id="start" data-loading-text="Loading..." type="button" class="btn btn-md btn-block btn-primary"><strong>START KNOWLEDGE TEST</strong></button>
+                    </div>
+                </div>
+                <div id="test" style="display: none">
+                    <div class="row text-center">
+                        <div id="question"></div>
+                    </div>
+                    <div class="flex">
+                        <div class="left">
+                            <div id="image"></div>
+                            <div id="mistakes">
+                                <div>
+                                    <p>Mistakes made: <span id="mistakes1" data-mistakes-amount="0">0</span> (section 1) / <span id="mistakes2" data-mistakes-amount="0">0</span> (section 2)</p>
+                                </div>
+                                <div>
+                                    <span>Question <span id="currentQuestion">1</span> of 40 (<span id="section">Section One: Road Signs</span>)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="results">
+                            <div class="alert alert-success">
+                                <p><strong>You have passed this time.</strong> We encourage you to repeat the quiz until you can get all the answers correct, each time. Then you'll be sure you are ready to go.</p>
+                            </div>
+                            <div id="donutchart">
+                                <div id="chart"></div>
+                                <div id="labelOverlay">
+                                    <p class="total"><span>%</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answers">
+                            <div id="answers" class="funkyradio">
+                                <div class="funkyradio-danger">
+                                    <input type="radio" name="radio" id="radio1">
+                                    <label for="radio1"></label>
+                                </div>
+                                <div class="funkyradio-danger">
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2"></label>
+                                </div>
+                                <div class="funkyradio-danger">
+                                    <input type="radio" name="radio" id="radio3">
+                                    <label for="radio3"></label>
+                                </div>
+                                <div class="funkyradio-danger">
+                                    <input type="radio" name="radio" id="radio4">
+                                    <label for="radio4"></label>
+                                </div>
+                            </div>
+                            <div class="next">
+                                <button id="next" type="button" class="hidden btn btn-primary btn-md">NEXT QUESTION</button>
+                                <button id="show_results" type="button" class="hidden btn btn-primary btn-md">SHOW RESULTS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-muted">
+                    <hr>
+                    <span>Email us at</span>
+                    <a href='mailto:info@bookroadtest.ca'>info@bookroadtest.ca</a>
+                    <span>with questions</span>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/g1.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-87014719-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
