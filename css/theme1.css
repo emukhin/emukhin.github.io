@@ -215,6 +215,7 @@ form .form-control::-webkit-input-placeholder {
 
 #question {
     margin: 15px;
+    min-height: 38px;
 }
 
 #next, #show_results {
