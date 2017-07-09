@@ -306,6 +306,10 @@ div.funkyradio-success > label {
         border: 1px solid #D1D3D4 !important;
         border-radius: 4px;
     }
+
+    .sm {
+        font-size: 12px;
+    }
 }
 
 .left.rules #image {

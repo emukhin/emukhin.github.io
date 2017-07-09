@@ -198,29 +198,29 @@
                     </div>
                     <br/>
                     <br/>
-                    <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1">
-                            <p>Your request was as follows:</p>
-                            <ul class="request"></ul>
+                    <div class="sm">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                <p>Your request was as follows:</p>
+                                <ul class="request"></ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row receipt">
-                        <div class="col-xs-10 col-xs-offset-1">
-                            <hr/>
-                            <div>Booking fee:<span style="float: right">$39.55 CAD</span></div>
-                            <div id="government_fee_g2" class="hidden">Gvnmt G2 road test fee<sup>*</sup>:<span class="government_fee">$52.50 CAD</span></div>
-                            <div id="government_fee_g" class="hidden">Gvnmt G road test fee<sup>*</sup>:<span class="government_fee">$89.25 CAD</span></div>
-                            <div id="government_fee_a" class="hidden">Gvnmt A road test fee<sup>*</sup>:<span class="government_fee">$89.25 CAD</span></div>
-                            <div><b>Total Due:</b><span style="float: right"><b id="total">$39.55 CAD</b></span></div>
-                            <div id="paid" class="hidden">
-                                <br/>
-                                <span><sup><strong>*</strong></sup> <small>If you're 100% sure that your Government fee is already paid click: <a role="button" id="government_fee_paid" href="javascript:void(0);"><strong>my Government fee is paid</strong></a>. Otherwise, leave it, we won't charge you if it's paid anyway.</small></span>
+                        <div class="row receipt">
+                            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                <hr/>
+                                <div>Booking fee:<span style="float: right">$39.55 CAD</span></div>
+                                <div id="government_fee" class="hidden">Government <span id="cat"></span> road test fee<sup>*</sup>:<span class="government_fee">$<span id="amount"></span> CAD</span></div>
+                                <div><b>Total Due:</b><span style="float: right"><b id="total">$39.55 CAD</b></span></div>
+                                <div id="paid" class="hidden">
+                                    <br/>
+                                    <span><sup><strong>*</strong></sup><small>If you're 100% sure that your Government fee is already paid click: <a role="button" id="government_fee_paid" href="javascript:void(0);"><strong>my Government fee is paid</strong></a>. Otherwise, leave it, we won't charge you if it's paid anyway.</small></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <br/>
                     <div class="row bottom-20">
-                        <div class="col-xs-10 col-xs-offset-1">
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                             <div class="checkbox text-center">
                                 <small>You can use your PayPal account, Visa, MasterCard, Discover or American Express debit or credit cards.</small>
                             </div>
@@ -229,19 +229,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row collapse">
-                        <div class="col-xs-10 col-xs-offset-1" style="border: 1px solid #bdc3c7; padding: 20px">
-                            <p>You may be wondering why you need to authorize payment if we promise not to charge you until you're booked.</p>
-                            <p>In the past, we requested payment after we secured a customer's road test. Unfortunately, many didn't pay.</p>
-                            <p>Now, we ask that customers authorize the payment before we start searching. It means we can get paid when you get booked - and not a moment sooner.</p>
-                            <p>When you click the green button above, it looks exactly like a payment, but it's not. You won't see a transaction in your bank account until we book your requested road test. At that point, the transaction is automatic.</p>
-                        </div>
-                    </div>
                     <div class="text-center hidden-xs" style="margin-bottom: 35px">
                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" style="margin-top: 0px;" border="0" alt="PayPal Acceptance Mark">
                     </div>
                 </div>
-                <div class="footer text-center text-muted">
+                <div class="footer text-center text-muted sm">
                     <hr>
                     <span>Email us at</span>
                     <a href='mailto:info@bookroadtest.ca'>info@bookroadtest.ca</a>
@@ -256,7 +248,7 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous">
     </script>
-    <script src="js/payment.min.v5.js"></script>
+    <script src="js/payment.min.v6.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
