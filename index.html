@@ -11,7 +11,8 @@
     <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/theme1.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/common.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/g2.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,7 +25,7 @@
 <body>
     <div class="container">
         <div class="shadow">
-            <div style="overflow: hidden" class="hidden-xs">
+            <div class="overflow hidden-xs">
                 <div class="head-left"></div>
                 <div class="head-right"></div>
                 <div class="head-middle"></div>
@@ -70,58 +71,54 @@
                         <h3>First, provide your data before booking.</h3>
                         <p class="small">Enter your license and contact info here, safely and securely.</p>
                         <br/>
-                        <div class="row hints">
-                            <div class="col-sm-12">
-                                <div class="row" style="display: flex; align-items: center; ">
-                                    <div class="col-sm-8">
-                                        <div class="form-group col-md-5 col-sm-5 col-xs-12">
-                                            <label for="licenceNumber">Driver's Licence Number</label>
-                                            <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
-                                        </div>
-                                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
-                                            <label for="licenceExpiryDate">Driver's Licence Expiry</label>
-                                            <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]{1}[0-9]{1}|3[0-1])$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
-                                        </div>
-                                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
-                                            <label for="class">Road Test Class</label>
-                                            <select id="class" title="G2" required class="selectpicker form-control" data-live-search="true" data-validation-error-msg="What class of road test would you like to book?">
-                                                <option>G</option>
-                                                <option>G2</option>
-                                                <option>M</option>
-                                                <option>M2</option>
-                                                <option>A</option>
-                                                <option>Az</option>
-                                                <option>B</option>
-                                                <option>Bz</option>
-                                                <option>C</option>
-                                                <option>Cz</option>
-                                                <option>D</option>
-                                                <option>Dz</option>
-                                                <option>E</option>
-                                                <option>Ez</option>
-                                                <option>F</option>
-                                                <option>Fz</option>
-                                                <option>Z</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                            <label for="email">Driver's email</label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">@</span>
-                                                <input data-validation="email" id="email" type="email" class="form-control" placeholder="name@email.com" required data-validation-error-msg="Email address is required">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 hidden-xs">
-                                        <ul id="bullets">
-                                            <li>Risk-Free: Only Pay if You Get the Booking You Requested</li>
-                                            <li>Straightforward and Simple</li>
-                                            <li>Works 24/7 to Find Your Ideal Road Test</li>
-                                            <li>Searches All Ontario Road Test Locations</li>
-                                            <li>Safe and Secure</li>
-                                        </ul>
+                        <div class="row hints flex">
+                            <div class="no-padding-side col-sm-8 col-xs-12">
+                                <div class="form-group no-padding-right col-sm-5 col-xs-6 license">
+                                    <label for="licenceNumber"><span>Driver's Licence Number</span></label>
+                                    <input type="text" id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required class="form-control" autocomplete="off" placeholder="_____-_____-_____" data-validation-help="A0000-00000-00000" maxlength="17" data-validation-error-msg="Driver's licence number is required">
+                                </div>
+                                <div class="form-group col-sm-4 col-xs-6 expiry">
+                                    <label for="licenceExpiryDate"><span>Driver's Licence Expiry</span></label>
+                                    <input type="text" id="licenceExpiryDate" pattern="^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]{1}[0-9]{1}|3[0-1])$" required class="form-control" data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD" data-validation-help="YYYY-MM-DD" data-validation-error-msg="Driver's licence expiry is required">
+                                </div>
+                                <div class="form-group no-padding-right col-sm-3 col-xs-3">
+                                    <label for="class"><span>Road Test Class</span></label>
+                                    <select id="class" title="G2" required class="selectpicker form-control" data-live-search="true" data-validation-error-msg="What class of road test would you like to book?">
+                                        <option>G</option>
+                                        <option>G2</option>
+                                        <option>M</option>
+                                        <option>M2</option>
+                                        <option>A</option>
+                                        <option>Az</option>
+                                        <option>B</option>
+                                        <option>Bz</option>
+                                        <option>C</option>
+                                        <option>Cz</option>
+                                        <option>D</option>
+                                        <option>Dz</option>
+                                        <option>E</option>
+                                        <option>Ez</option>
+                                        <option>F</option>
+                                        <option>Fz</option>
+                                        <option>Z</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-12 col-xs-9">
+                                    <label for="email">Driver's email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input data-validation="email" id="email" type="email" class="form-control" placeholder="name@email.com" required data-validation-error-msg="Email address is required">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-sm-4 hidden-xs">
+                                <ul id="bullets">
+                                    <li>Risk-Free: Only Pay if You Get the Booking You Requested</li>
+                                    <li>Straightforward and Simple</li>
+                                    <li>Works 24/7 to Find Your Ideal Road Test</li>
+                                    <li>Searches All Ontario Road Test Locations</li>
+                                    <li>Safe and Secure</li>
+                                </ul>
                             </div>
                         </div>
                         <p><em>Double-check. Are your details accurate? Great!</em></p>
@@ -129,16 +126,14 @@
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <div class="small">
-                                    <p>Using the fields below, choose your prefered DriveTest centre location(s). Then choose the period<span class="hidden-sm hidden-xs">(s)</span> within which you would like to take a road test.</p>
-                                    <p class="hidden-sm hidden-xs">Choose one or many locations to increase your odds of finding an early booking.</p>
+                                    <p>Using the fields below, choose your prefered DriveTest centre location(s). Then choose the period(s) within which you would like to take a road test.</p>
+                                    <p>Choose one or many locations to increase your odds of finding an early booking.</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="row period">
-                            <div class="col-lg-6 col-sm-5">
-                                <div class="form-group margin-right">
-                                    <select id="locationPicker" data-hide-disabled="true", class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="15" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                            <div class="location">
+                                <select id="locationPicker" data-hide-disabled="true" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="auto" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
                                         <option category="G2">Arnprior</option>
                                         <option category="A G2">Atikokan</option>
                                         <option category="A G G2 M M2">Bancroft</option>
@@ -234,26 +229,25 @@
                                         <option category="A G G2 M M2">Windsor</option>
                                         <option category="A G G2 M2">Woodstock</option>
                                     </select>
-                                </div>
                             </div>
-                            <div class="col-lg-6 col-sm-7 form-inline">
-                                <div class="form-group margin-right">
+                            <div class="time">
+                                <div class="from no-margin-left">
                                     <label for="dateTimePickerFrom" class="sr-only">From</label>
                                     <input id="dateTimePickerFrom" onfocus="blur()" autocomplete="off" placeholder="from" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select start date">
                                 </div>
-                                <div class="form-group margin-right">
+                                <div class="from">
                                     <label for="dateTimePickerTo" class="sr-only">To</label>
                                     <input id="dateTimePickerTo" onfocus="blur()" autocomplete="off" placeholder="to" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select end date">
                                 </div>
-                                <div class="form-group margin-right hidden-sm hidden-xs">
-                                    <button id="addPeriod" type="button" class="btn btn-default form-control" title="Add another period">Add</button>
-                                    <button id="removePeriod" type="button" class="btn btn-default form-control hidden" title="Add another period">Remove</button>
+                                <div class="add-remove">
+                                    <button id="addPeriod" type="button" class="margin-left-15 btn btn-default form-control" title="Add another period"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                    <button id="removePeriod" type="button" class="margin-left hidden btn btn-default form-control" title="Remove period"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row bottom-20">
+                        <div class="row bottom-20 top-30">
                             <div class="checkbox small text-center">
-                                <label><input type="checkbox" required value="" data-validation-error-msg="You must agree to our Terms of Service">Check here to indicate that you have read <a rel="nofollow" href="how-it-works.html" target="_blank">how it works</a> section.</label>
+                                <span>By submitting, I agree to the <a rel="nofollow" href="how-it-works.html" target="_blank">rules</a></span>
                             </div>
                             <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
                                 <button id="submit" type="submit" data-loading-text="Submitting..." class="btn btn-md btn-block btn-success"><strong>BOOK A ROAD TEST</strong></button>

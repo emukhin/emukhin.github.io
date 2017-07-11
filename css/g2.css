@@ -1,0 +1,158 @@
+#bullets {
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+#bullets li {
+    padding: 1px;
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+    .hints .form-group {
+        height: 88px !important;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .period .location {
+        flex: 1 0 50% !important;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .add-remove button {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .period .time .from {
+        flex: 1 0 90px !important;
+    }
+}
+
+@media all and (max-width: 667px) {
+    .col-xs-6.license {
+        width: 56%;
+    }
+
+    .col-xs-6.expiry {
+        width: 44%;
+    }
+
+    .license label[for='licenceNumber'] span, .expiry label[for='licenceExpiryDate'] span, .col-xs-3 label[for='class'] span {
+        display: none;
+    }
+
+    .license label[for='licenceNumber']:after {
+        content: 'Licence Number';
+    }
+
+    .expiry label[for='licenceExpiryDate']:after {
+        content: 'Licence Expiry';
+    }
+
+    .col-xs-3 label[for='class']:after {
+        content: 'Class';
+    }
+
+    .no-padding-right {
+        padding-right: 0px !important;
+    }
+
+    .no-padding-side {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .no-margin-left {
+        margin-left: 0px !important;
+    }
+
+    input.form-control {
+        font-size: 13px !important;
+    }
+
+    .period .location {
+        max-width: 100% !important;
+        padding-bottom: 8px;
+    }
+}
+
+.period {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #eeeeee;
+}
+
+.small {
+    font-size: 13px !important;
+}
+
+.margin-left {
+    margin-left: 8px;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+.bottom-20 {
+    margin-bottom: 20px !important;
+}
+
+
+form .form-control::-moz-placeholder {
+  color: #cacaca;
+  opacity: 1;
+}
+
+form .form-control:-ms-input-placeholder {
+  color: #cacaca;
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
+.help-block.form-error {
+    display: none;
+}
+
+.hints .form-group {
+    height: 68px;
+}
+
+.period .location {
+    flex: 1 0 70%;
+    max-width: 50%;
+}
+
+.period .time {
+    display: flex;
+    flex: 1 1 330px;
+}
+
+.add-remove {
+    display: inline-flex;
+}
+
+.period .time .from {
+    flex: 1 0 100px;
+    margin-left: 15px;
+}
+
+.add-remove #addPeriod {
+    flex: 1 1 35px;
+}
+
+.add-remove #removePeriod {
+    flex: 1 1 35px;
+}
+
+.order-form .flex {
+    align-items: center;
+}
