@@ -1,0 +1,244 @@
+.braintree-hosted-fields-invalid {
+    border: 1px solid #a94442;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.braintree-hosted-fields-valid {
+    border: 1px solid #3c763d;
+}
+
+/* Braintree Hosted Fields styling classes*/
+.braintree-hosted-fields-focused {
+    border: 1px solid #0275d8;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+
+}
+
+.braintree-hosted-fields-focused.focused-invalid {
+    border: 1px solid #ebcccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,0,.6);
+}
+
+.form-control {
+    border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.has-warning .form-control {
+    //#8a6d3b
+}
+
+.form-group::-moz-placeholder {
+  color: red!important;
+  opacity: 1;
+}
+
+.form-group:-ms-input-placeholder {
+  color: red!important;
+}
+
+.form-group::-webkit-input-placeholder {
+  color: red!important;
+}
+
+#expiration-month {
+    padding: 6px 6px;
+    flex: 1 0;
+}
+
+#expiration-year {
+    margin-left: 6px;
+    padding: 6px 6px;
+    flex: 1 0;
+}
+
+.number {
+    position: relative;
+}
+
+.card-date {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#exp-date {
+    display: inline-flex;
+}
+
+#card-number {
+    flex: 1 1 162px;
+}
+
+#cvv {
+    width: 38px;
+    padding: 6px 6px;
+    margin: 0 auto;
+}
+
+
+@media all and (max-width: 374px) {
+    .card-block * {
+        font-size: 10px !important;
+    }
+    .number {
+        padding-bottom: 10px;
+    }
+}
+
+@media all and (min-width: 375px) and (max-width: 413px) {
+    .card-block * {
+        font-size: 11.5px;
+    }
+    .number {
+        padding-bottom: 20px;
+    }
+}
+
+@media all and (min-width: 414px) and (max-width: 1199px) {
+    .card-block * {
+        font-size: 13px;
+    }
+    .number {
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-block * {
+        font-size: 14px;
+    }
+    .number {
+        padding-bottom: 20px;
+    }
+}
+
+.payment-options {
+    font-size: 0.8em;
+}
+
+#government_fee_paid {
+    border-bottom: 1px dashed #999;
+    text-decoration: none;
+}
+
+.card {
+    border: 1px solid #ccc;
+}
+
+#paid span{
+    font-size: 0.8em;
+}
+
+.card-block {
+    display: flex;
+
+    min-width: 270px;
+    max-width: 400px;
+    min-height: 124px;
+
+    border-radius: 15px;
+    background-color: #e4f6ff;
+    font-weight: 600;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    margin: 30px auto;
+    margin-top: 10px;
+}
+
+
+.front {
+    min-width: 182px;
+    max-width: 280px;
+
+    flex-grow: 1;
+    flex-basis: 60%;
+
+    border-top: 0;
+    border-bottom: 0;
+    background-color: #e4f6ff;
+    padding: 1.3em;
+    border-radius: 15px;
+    position: relative;
+    -webkit-box-shadow: 5px 0 10px -5px #888;
+       -moz-box-shadow: 5px 0 10px -5px #888;
+            box-shadow: 5px 0 10px -5px #888;
+    z-index: 1;
+}
+
+.back {
+    flex-grow: 1;
+    min-width: 30px;
+    max-width: 200px;
+
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+}
+
+.magnetic {
+    width: 100%;
+    height: 25px;
+    background-color: #a0c4d6;
+    margin-top: 15px;
+}
+
+.cvv {
+    position: absolute;
+    right: 10px;
+    top: 45px;
+}
+
+.info-line {
+    width: 90%;
+    height: 7px;
+    background-color: #caedff;
+    margin-right: 10px;
+    margin-top: 9px;
+}
+
+.info-line.first-line {
+    margin-top: 13px;
+}
+
+ul.request {
+    padding-left: 30px;
+}
+
+#paypal-button {
+    max-width: 200px;
+}
+
+.cvv span {
+    font-size: 9px;
+}
+
+.card-block .form-control {
+    height: 2.8em;
+}
+
+#card-image.visa {
+    background-position: 0 -398px;
+}
+
+#card-image.master-card {
+    background-position: 0 -281px;
+}
+
+#card-image {
+    background-image:url("../images/card_sprite.png");
+    position: absolute;
+    top: -1em;
+    right: 0;
+    width: 44px;
+    height: 28px;
+    background-size: 86px 458px;
+    border-radius: 4px;
+    background-position: -100px 0;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
