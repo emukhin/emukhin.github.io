@@ -43,14 +43,19 @@
 }
 
 #expiration-month {
+    margin-right: 3px;
     padding: 6px 6px;
     flex: 1 0;
 }
 
 #expiration-year {
-    margin-left: 6px;
+    margin-left: 3px;
     padding: 6px 6px;
     flex: 1 0;
+}
+
+#separator {
+    line-height: 2.8em;
 }
 
 .number {
@@ -143,10 +148,14 @@ div#exp-date {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 
-    margin: 30px auto;
+    margin: auto;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
+#paypal {
+    margin: 20px auto;
+}
 
 .front {
     min-width: 182px;
@@ -209,7 +218,7 @@ ul.request {
     padding-left: 30px;
 }
 
-#paypal-button {
+#braintree-button {
     max-width: 200px;
 }
 
