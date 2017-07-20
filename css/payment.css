@@ -82,7 +82,7 @@ div#exp-date {
 }
 
 
-@media all and (max-width: 374px) {
+@media all and (max-width: 359px) {
     .card-block * {
         font-size: 10px !important;
     }
@@ -91,7 +91,7 @@ div#exp-date {
     }
 }
 
-@media all and (min-width: 375px) and (max-width: 413px) {
+@media all and (min-width: 360px) and (max-width: 411px) {
     .card-block * {
         font-size: 11.5px;
     }
@@ -100,7 +100,7 @@ div#exp-date {
     }
 }
 
-@media all and (min-width: 414px) and (max-width: 1199px) {
+@media all and (min-width: 412px) and (max-width: 1199px) {
     .card-block * {
         font-size: 13px;
     }
@@ -119,7 +119,7 @@ div#exp-date {
 }
 
 .payment-options {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 #government_fee_paid {
@@ -150,7 +150,7 @@ div#exp-date {
 
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #paypal {
@@ -220,6 +220,7 @@ ul.request {
 
 #braintree-button {
     max-width: 200px;
+    margin-top: 20px;
 }
 
 .cvv span {
@@ -250,4 +251,11 @@ ul.request {
     background-position: -100px 0;
     background-repeat: no-repeat;
     margin-bottom: 1em;
+}
+
+.government_fee {
+    float: right;
+}
+.strikedout {
+    text-decoration: line-through;
 }
