@@ -21,6 +21,14 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,0,.6);
 }
 
+#security-notice {
+    border-left: 4px solid #6bd46b;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
 .form-control {
     border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
