@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book a road test | Ontario - How it Works</title>
+    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=1">
+    <script>
+        /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+        (function(w){
+            "use strict";
+            /* exported loadCSS */
+            var loadCSS = function( href, before, media ){
+                // Arguments explained:
+                // `href` [REQUIRED] is the URL for your CSS file.
+                // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+                    // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+                // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+                var doc = w.document;
+                var ss = doc.createElement( "link" );
+                var ref;
+                if( before ){
+                    ref = before;
+                }
+                else {
+                    var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+                    ref = refs[ refs.length - 1];
+                }
+
+                var sheets = doc.styleSheets;
+                ss.rel = "stylesheet";
+                ss.href = href;
+                // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+                ss.media = "only x";
+
+                // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+                function ready( cb ){
+                    if( doc.body ){
+                        return cb();
+                    }
+                    setTimeout(function(){
+                        ready( cb );
+                    });
+                }
+                // Inject link
+                    // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+                    // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+                ready( function(){
+                    ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+                });
+                // A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+                var onloadcssdefined = function( cb ){
+                    var resolvedHref = ss.href;
+                    var i = sheets.length;
+                    while( i-- ){
+                        if( sheets[ i ].href === resolvedHref ){
+                            return cb();
+                        }
+                    }
+                    setTimeout(function() {
+                        onloadcssdefined( cb );
+                    });
+                };
+
+                function loadCB(){
+                    if( ss.addEventListener ){
+                        ss.removeEventListener( "load", loadCB );
+                    }
+                    ss.media = media || "all";
+                }
+
+                // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+                if( ss.addEventListener ){
+                    ss.addEventListener( "load", loadCB);
+                }
+                ss.onloadcssdefined = onloadcssdefined;
+                onloadcssdefined( loadCB );
+                return ss;
+            };
+            // commonjs
+            if( typeof exports !== "undefined" ){
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }( typeof global !== "undefined" ? global : this ));
+
+        /*! CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT  */
+        (function( w ){
+          // rel=preload support test
+          if( !w.loadCSS ){
+            return;
+          }
+          var rp = loadCSS.relpreload = {};
+          rp.support = function(){
+            try {
+              return w.document.createElement( "link" ).relList.supports( "preload" );
+            } catch (e) {
+              return false;
+            }
+          };
+
+          // loop preload links and fetch using loadCSS
+          rp.poly = function(){
+            var links = w.document.getElementsByTagName( "link" );
+            for( var i = 0; i < links.length; i++ ){
+              var link = links[ i ];
+              if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+                w.loadCSS( link.href, link );
+                link.rel = null;
+              }
+            }
+          };
+
+          // if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
+          if( !rp.support() ){
+            rp.poly();
+            var run = w.setInterval( rp.poly, 300 );
+            if( w.addEventListener ){
+              w.addEventListener( "load", function(){
+                w.clearInterval( run );
+              } );
+            }
+            if( w.attachEvent ){
+              w.attachEvent( "onload", function(){
+                w.clearInterval( run );
+              } )
+            }
+          }
+        }( this ));
+
+    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="icon" href="images/favicon.png">
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-87014719-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="shadow">
+            <div style="overflow: hidden" class="hidden-xs">
+                <div class="head-left"></div>
+                <div class="head-right"></div>
+                <div class="head-middle"></div>
+            </div>
+            <div class="site-content-wrapper">
+                <nav class="navbar navbar-default navbar-static-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-logo hidden-lg hidden-md hidden-sm">
+                                <img alt="Brand" src="images/ontario.png" width="40px">
+                                <span>How It Works</span>
+                            </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="g1-knowledge-test" title="Knowledge Test (G1)">Knowledge Test</a></li>
+                                <li><a href="/" title="Book a Driving Test (G2, G etc.)">Book a Road Test</a></li>
+                                <li class="active"><a href="#" title="How it Works">How It Works</a></li>
+                                <li><a href="faq" title="FAQs">FAQs</a></li>
+                                <li><a href="affiliate" title="Earn With Us">Earn With Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div>
+                    <h1>Terms of Use</h1>
+                    <h2>Payment Security</h2>
+                    <p>Online payment is secure. Personal and credit card information entered on this site is transmitted electronically in a format that cannot be intercepted, altered, or decoded by a third party, as it is encrypted to ensure its confidentiality. This website complies with SSL encryption standards, under which transaction information will always be transmitted securely. Payment is processed through Braintree payment service (https://www.braintreepayments.com). This website does not store credit card information on any transaction.</p>
+                    <h2>Notice of Collection</h2>
+                    <p>The personal information that you provide to bookroadtest.ca will be used to book your road test only, except as may be authorized by law. Your information will not be included on any mailing lists.</p>
+                    <h2>Privacy</h2>
+                    <p>While booking a road test, you will be asked to provide some personal information. The details that you provide to us allow us to book your road test appointment, send a confirmation email, send an appointment reminder, and contact you regarding your order. You will not be placed on any promotional phone or mailing lists, nor will your information be released to any third party, except as may be authorized by law.</p>
+                </div>
+
+                <div class="footer text-center text-muted sm">
+                    <hr>
+                    <span>Email us at</span>
+                    <a href='mailto:info@bookroadtest.ca'>info@bookroadtest.ca</a>
+                    <span>with questions &</span>
+                    <div itemscope itemtype="http://schema.org/Organization">Share your success on <a itemprop="url" image="images/facebook.png" target="_blank" href="https://www.facebook.com/bookroadtest/">Facebook</a> <img src="images/facebook.png" alt="facebook"> for a chance to book your road test free.</div>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        jQuery(function(){
+            if (window.self != window.top) {
+                $(document.body).addClass("in-iframe");
+            }
+        });
+    </script>
+</body>
+</html>
