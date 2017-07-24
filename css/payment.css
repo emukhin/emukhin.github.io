@@ -22,11 +22,13 @@
 }
 
 #security-notice {
-    border-left: 4px solid #6bd46b;
-    padding-left: 10px;
+    border-left: 4px solid #6bd46b !important;
     margin-top: 20px;
     margin-bottom: 25px;
     font-size: 0.9em;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 5px rgba(112,109,120,0.3);
+    padding: 0.625rem 1.25rem 0.875rem;
 }
 
 .form-control {
