@@ -118,10 +118,6 @@ form .form-control::-webkit-input-placeholder {
   color: #cacaca;
 }
 
-.help-block.form-error {
-    display: none;
-}
-
 .hints .form-group {
     height: 68px;
 }
