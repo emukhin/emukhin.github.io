@@ -13,7 +13,7 @@
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=1">
+    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=5">
     <script>
         /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
         (function(w){
@@ -149,6 +149,7 @@
     <link rel="icon" href="images/favicon.png">
 </head>
 <body>
+    <a id="checkout" href="payment" class="hidden"><img alt="checkout" title="Back to payment page"></a>
     <div class="container">
         <div class="shadow">
             <div style="overflow: hidden" class="hidden-xs">
@@ -227,12 +228,6 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        jQuery(function(){
-            if (window.self != window.top) {
-                $(document.body).addClass("in-iframe");
-            }
-        });
-    </script>
+    <script src="js/core.min.js?v=7"></script>
 </body>
 </html>

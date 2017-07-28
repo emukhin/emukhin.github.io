@@ -90,6 +90,11 @@ input[type=text], input[type=tel], input[type=email] {
     }
 }
 
+@media all and (max-width: 767px) {
+    #checkout img {
+        content:url("../images/CC-48.png") !important;
+    }
+}
 
 @media all and (max-width: 667px) {
     h1 {
@@ -162,4 +167,12 @@ input[type=text], input[type=tel], input[type=email] {
 
 .top-30 {
     margin-top: 30px !important;
+}
+
+#checkout img {
+    position: fixed;
+    top: 5px;
+    left: 15px;
+    z-index: 1001;
+    content:url("../images/CC-96.png");
 }
