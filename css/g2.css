@@ -76,6 +76,11 @@
         max-width: 100% !important;
         padding-bottom: 8px;
     }
+
+    #video {
+        width: 100% !important;
+        padding-right: 0px !important;
+    }
 }
 
 .period {
@@ -151,4 +156,10 @@ form .form-control::-webkit-input-placeholder {
 
 .order-form .flex {
     align-items: center;
+#video {
+    float: left;
+    width: 58%;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
 }
