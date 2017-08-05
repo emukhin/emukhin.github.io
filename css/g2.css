@@ -156,10 +156,11 @@ form .form-control::-webkit-input-placeholder {
 
 .order-form .flex {
     align-items: center;
+}
+
 #video {
     float: left;
     width: 58%;
     padding-right: 20px;
     margin-bottom: 10px;
-}
 }
