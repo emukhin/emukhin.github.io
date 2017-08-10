@@ -267,6 +267,11 @@ ul.request {
 .government_fee {
     float: right;
 }
+
 .strikedout {
     text-decoration: line-through;
+}
+
+#check {
+    margin-top: 5px;
 }

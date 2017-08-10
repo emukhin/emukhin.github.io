@@ -207,14 +207,34 @@
                             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                                 <p>Your request was as follows:</p>
                                 <ul class="request"></ul>
+                                <hr/>
+                            </div>
+                        </div>
+                        <div class="row hidden" id="discount_block">
+                            <div class="col-xs-12 col-sm-10 col-sm-offset-1 center text-center">
+                                <p>Do you have a promo code?</p>
+                                <div class="row">
+                                    <div class="col-xs-4 col-xs-offset-4">
+                                        <div id="promo-result" class="alert collapse" role="alert">
+                                            <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <p class="text-center">25% discount is applied.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-2 col-xs-offset-5">
+                                    <input type="text" id="promo" class="form-control">
+                                    <button id="check" type="submit" data-loading-text="Checking..." class="btn btn-md btn-block btn-info">Check</button>
+                                </div>
                             </div>
                         </div>
                         <div class="row receipt">
                             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                                <hr/>
-                                <div>Booking fee:<span style="float: right">$39.55 CAD</span></div>
+                                <div>Booking fee:<span class="pull-right">$39.55 CAD</span></div>
+                                <div id="discount" class="hidden">Discount <span id="percent"></span>%:<span class="pull-right">($<span id="discount_amount"></span> CAD)</span></div>
                                 <div id="government_fee" class="hidden">Government <span id="cat"></span> road test fee<sup>*</sup>:<span class="government_fee">$<span id="amount"></span> CAD</span></div>
-                                <div><b>Total Due:</b><span style="float: right"><b id="total">$39.55 CAD</b></span></div>
+                                <div><b>Total Due:</b><span class="pull-right"><b id="total">$39.55 CAD</b></span></div>
                                 <div id="paid" class="hidden">
                                     <br/>
                                     <span><sup><strong>*</strong></sup>If you're 100% sure that your Government fee is already paid click: <a role="button" id="government_fee_paid" href="javascript:;"><strong>my Government fee is paid</strong></a>. Otherwise, leave it, we won't charge you if it's paid anyway.</span>
@@ -297,6 +317,6 @@
     <script src="https://js.braintreegateway.com/web/3.19.1/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.19.1/js/paypal.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/payment.min.js?v=7"></script>
+    <script src="js/payment.min.js?v=8"></script>
 </body>
 </html>
