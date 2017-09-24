@@ -68,6 +68,7 @@
             }).then(function(result){
                 $("#details").html(finalIP);
                 info.ip = finalIP;
+                $("#info").html(JSON.stringify(info, null, 4));
                 $.ajax({
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
