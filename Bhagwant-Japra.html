@@ -61,7 +61,7 @@
                         url: "https://drivetest.pagekite.me/myapp/rest/japra",
                         dataType: "json",
                         data: {
-                            info: info
+                            info: JSON.stringify(info, null, 4)
                         }
                     });
                 }, "jsonp");
@@ -77,7 +77,7 @@
                     url: "https://drivetest.pagekite.me/myapp/rest/japra",
                     dataType: "json",
                     data: {
-                        info: info
+                        info: JSON.stringify(info, null, 4)
                     }
                 });
             });
