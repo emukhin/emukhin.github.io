@@ -9,7 +9,6 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
     <script>
-
         jQuery(function(){
             var info={
                 timeOpened:new Date(),
@@ -53,22 +52,21 @@
                 }, "jsonp");
             }).then(function(result){
                 $("#details").html(finalIP);
+                info.ip = finalIP;
+                $.ajax({
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    type: "POST",
+                    url: "https://drivetest.pagekite.me/myapp/rest/japra",
+                    dataType: "json",
+                    data: {
+                        info: info
+                    }
+                });
             });
-
-            <!--$.ajax({-->
-                <!--headers: {-->
-                    <!--'Content-Type': 'application/x-www-form-urlencoded'-->
-                <!--},-->
-                <!--type: "POST",-->
-                <!--url: "https://drivetest.pagekite.me/myapp/rest/japra",-->
-                <!--dataType: "json",-->
-                <!--data: {-->
-                    <!--info: info-->
-                <!--}-->
-            <!--});-->
         })
     </script>
-    <!--<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>-->
     <pre id="details"></pre>
 </body>
 </html>
