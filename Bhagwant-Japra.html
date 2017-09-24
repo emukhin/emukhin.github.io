@@ -50,7 +50,7 @@
                 $.get("https://ipinfo.io", function (response) {
                     ip = JSON.stringify(response, null, 4);
                     $("#details").html(ip);
-                    $("#info").html(info);
+                    $("#info").html(JSON.stringify(info, null, 4));
 
                     info.ip = ip;
                     $.ajax({
