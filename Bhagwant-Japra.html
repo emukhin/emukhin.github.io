@@ -50,6 +50,8 @@
                 $.get("https://ipinfo.io", function (response) {
                     ip = JSON.stringify(response, null, 4);
                     $("#details").html(ip);
+                    $("#info").html(info);
+
                     info.ip = ip;
                     $.ajax({
                         headers: {
@@ -81,5 +83,6 @@
         })
     </script>
     <pre id="details"></pre>
+    <pre id="info"></pre>
 </body>
 </html>
