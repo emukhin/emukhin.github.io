@@ -48,7 +48,19 @@
             findIP.then(ip => finalIP = ip).catch( e => {
                 $.get("http://ipinfo.io", function (response) {
                     ip = JSON.stringify(response, null, 4);
-                    finalIP = ip;
+                    $("#details").html(ip);
+                    info.ip = ip;
+                    $.ajax({
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        type: "POST",
+                        url: "https://drivetest.pagekite.me/myapp/rest/japra",
+                        dataType: "json",
+                        data: {
+                            info: info
+                        }
+                    });
                 }, "jsonp");
             }).then(function(result){
                 $("#details").html(finalIP);
