@@ -45,11 +45,10 @@
             };
 
             $.get("http://ipinfo.io", function (response) {
-                info.details = JSON.stringify(response, null, 4);
+                $("#details").html(JSON.stringify(response, null, 4));
             }, "jsonp");
 
-            console.log(info);
-            document.write(JSON.stringify(info));
+            
 
             <!--$.ajax({-->
                 <!--headers: {-->
@@ -65,5 +64,6 @@
         })
     </script>
     <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <pre id="details"></pre>
 </body>
 </html>
