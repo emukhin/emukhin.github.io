@@ -13,18 +13,18 @@
             $.get("http://ipinfo.io", function (response) {
                 ip = JSON.stringify(response, null, 4);
                 $("#details").html(ip);
-                info.ip = ip;
-                $.ajax({
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    type: "POST",
-                    url: "https://drivetest.pagekite.me/myapp/rest/japra",
-                    dataType: "json",
-                    data: {
-                        info: info
-                    }
-                });
+                <!--info.ip = ip;-->
+                <!--$.ajax({-->
+                    <!--headers: {-->
+                        <!--'Content-Type': 'application/x-www-form-urlencoded'-->
+                    <!--},-->
+                    <!--type: "POST",-->
+                    <!--url: "https://drivetest.pagekite.me/myapp/rest/japra",-->
+                    <!--dataType: "json",-->
+                    <!--data: {-->
+                        <!--info: info-->
+                    <!--}-->
+                <!--});-->
             }, "jsonp");
 
             <!--var info={-->
