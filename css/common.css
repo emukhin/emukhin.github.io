@@ -86,7 +86,10 @@ input[type=text], input[type=tel], input[type=email] {
     }
 
     body {
-        background-image: url("../images/background.jpg");
+        background: #acbace;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #eef2f3, #acbace);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #eef2f3, #acbace); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-attachment: fixed;
     }
 }
 
