@@ -32,7 +32,7 @@
     <a id="checkout" href="payment" class="hidden"><img alt="checkout" title="Back to payment page"></a>
     <div class="container">
         <div class="shadow">
-            <div class="overflow hidden-xs">
+            <div class="hidden-xs">
                 <div class="head-left"></div>
                 <div class="head-right"></div>
                 <div class="head-middle"></div>
@@ -42,7 +42,7 @@
                     <div class="container-fluid">
                         <div class="navbar-header">
                             <div class="navbar-logo hidden-lg hidden-md hidden-sm">
-                                <img alt="Brand" src="images/ontario.png" width="35px">
+                                <img alt="Brand" src="images/logo.png" width="35px">
                                 <span>Book a Road Test</span>
                             </div>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -118,7 +118,8 @@
                 <div class="order-form">
                     <form role="form" method="post" name="driverInfo" id="driverInfo" novalidate>
                         <h3>First, provide your data before booking.</h3>
-                        <p class="small">Enter your license and contact info here, safely and securely.</p>
+                        <p class="small">Enter your licence and contact info here, safely and securely.</p>
+                        <p class="small"><span class="text-warning">Attention!</span> Use either the Date of Expiry of your plastic licence or the Issue Date of your paper (temporary) one.</p>
                         <br/>
                         <div class="row hints flex">
                             <div class="no-padding-side col-sm-8 col-xs-12">
@@ -132,7 +133,7 @@
                                 </div>
                                 <div class="form-group no-padding-right col-sm-3 col-xs-3">
                                     <label for="class"><span>Road Test Class</span></label>
-                                    <select id="class" title="G2" required class="selectpicker form-control" data-live-search="true" data-validation-error-msg="What class of road test would you like to book?">
+                                    <select id="class" required class="selectpicker form-control" data-live-search="true" data-validation-error-msg="What class of road test would you like to book?">
                                         <option>G</option>
                                         <option>G2</option>
                                         <option>M</option>
@@ -183,101 +184,101 @@
                         <div class="row period">
                             <div class="location">
                                 <select id="locationPicker" data-hide-disabled="true" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="auto" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
-                                        <option category="G2">Arnprior</option>
-                                        <option category="A G2 F">Atikokan</option>
-                                        <option category="A G G2 M M2 F">Bancroft</option>
-                                        <option category="A G G2 M M2 F">Barrie</option>
-                                        <option category="G2">Barrys Bay</option>
-                                        <option category="A G G2 M M2 F">Belleville</option>
-                                        <option category="A G G2 M M2 F">Blind River</option>
-                                        <option category="A G G2 M M2 F">Brampton</option>
-                                        <option category="A G G2 M M2 F">Brantford</option>
-                                        <option category="A G G2 M M2 F">Brockville</option>
-                                        <option category="A G G2 M M2 F">Burlington</option>
-                                        <option category="G2">Carleton Place</option>
-                                        <option category="G2">Casselman</option>
-                                        <option category="A G2 F">Chapleau</option>
-                                        <option category="A G G2 M M2 F">Chatham</option>
-                                        <option category="A G G2 M2 F">Clinton</option>
-                                        <option category="A G2 F">Cochrane</option>
-                                        <option category="G G2">Collingwood</option>
-                                        <option category="A G G2 M M2 F">Cornwall</option>
-                                        <option category="A G G2 M M2 F">Dryden</option>
-                                        <option category="G2 F">Dubreuilville</option>
-                                        <option category="G2">Ear Falls</option>
-                                        <option category="A G G2 M M2 F">Elliott Lake</option>
-                                        <option category="A G G2 M M2 F">Espanola</option>
-                                        <option category="A G G2 M M2 F">Fort Frances</option>
-                                        <option category="A G2 M2 F">Geraldton</option>
-                                        <option category="A G G2 M M2 F">Guelph</option>
-                                        <option category="G2 M2 F">Haliburton</option>
-                                        <option category="A G G2 M M2 F">Hamilton</option>
-                                        <option category="A G G2 M M2 F">Hawkesbury</option>
-                                        <option category="A G G2 M M2 F">Hearst</option>
-                                        <option category="G2 F">Hornepayne</option>
-                                        <option category="A G G2 M M2 F">Huntsville</option>
-                                        <option category="G2">Ignace</option>
-                                        <option category="A G G2 M M2 F">Kapuskasing</option>
-                                        <option category="G2">Kemptville</option>
-                                        <option category="A G G2 M M2 F">Kenora</option>
-                                        <option category="A G G2 M M2 F">Kingston</option>
-                                        <option category="A G G2 M M2 F">Kirkland Lake</option>
-                                        <option category="A G G2 M M2 F">Kitchener</option>
-                                        <option category="G2">Leamington</option>
-                                        <option category="A G G2 M M2 F">Lindsay</option>
-                                        <option category="A G2 M2 F">Little Current</option>
-                                        <option category="A G G2 M M2 F">London</option>
-                                        <option category="G2">Madoc</option>
-                                        <option category="A G2 M2 F">Manitouwadge</option>
-                                        <option category="A G G2 M M2 F">Marathon</option>
-                                        <option category="G2 F">Mattawa</option>
-                                        <option category="A G G2 F">Moosonee</option>
-                                        <option category="A G G2 M M2 F">New Liskeard</option>
-                                        <option category="A G G2 M M2 F">Newmarket</option>
-                                        <option category="A G2 M2 F">Nipigon</option>
-                                        <option category="A G G2 M M2 F">North Bay</option>
-                                        <option category="G G2">Oakville</option>
-                                        <option category="A G G2 M2 F">Orangeville</option>
-                                        <option category="A G G2 M M2 F">Orillia</option>
-                                        <option category="A G G2 M M2 F">Oshawa</option>
-                                        <option category="G G2">Ottawa Canotek</option>
-                                        <option category="A G G2 M M2 F">Ottawa Walkley</option>
-                                        <option category="A G G2 M M2 F">Owen Sound</option>
-                                        <option category="A G G2 M M2 F">Parry Sound</option>
-                                        <option category="A G G2 M F">Pembroke</option>
-                                        <option category="A G G2 M M2 F">Peterborough</option>
-                                        <option category="A G2 F">Pickle Lake</option>
-                                        <option category="G G2">Port Hope</option>
-                                        <option category="G2">Rainy River</option>
-                                        <option category="A G2 F">Red Lake</option>
-                                        <option category="A G G2 M M2 F">Renfrew</option>
-                                        <option category="G2">Rockland</option>
-                                        <option category="A G G2 M2 F">Sarnia</option>
-                                        <option category="A G G2 M M2 F">Sault Ste Marie</option>
-                                        <option category="A G2 M2 F">Schreiber</option>
-                                        <option category="A G G2 M2 F">Simcoe</option>
-                                        <option category="G2">Sioux Lookout</option>
-                                        <option category="A G G2 M M2 F">Smiths Falls</option>
-                                        <option category="A G G2 M M2 F">St Catharines</option>
-                                        <option category="G G2 M2 F">Stratford</option>
-                                        <option category="A G G2 M M2 F">Sudbury</option>
-                                        <option category="G2 F">Sundridge</option>
-                                        <option category="G2 F">Thessalon</option>
-                                        <option category="A G G2 M M2 F">Thunder Bay</option>
-                                        <option category="A G G2 M2 F">Tillsonburg</option>
-                                        <option category="A G G2 M M2 F">Timmins</option>
-                                        <option category="A G G2 M F">Toronto Downsview</option>
-                                        <option category="G G2">Toronto Etobicoke</option>
-                                        <option category="G G2 M M2">Toronto Metro East</option>
-                                        <option category="G G2">Toronto Port Union</option>
-                                        <option category="A G G2 M M2 F">Walkerton</option>
-                                        <option category="A G G2 M M2 F">Wawa</option>
-                                        <option category="G2">Westport</option>
-                                        <option category="G2 F">White River</option>
-                                        <option category="G2">Winchester</option>
-                                        <option category="A G G2 M M2 F">Windsor</option>
-                                        <option category="A G G2 M2 F">Woodstock</option>
-                                    </select>
+                                    <option category="G2">Arnprior</option>
+                                    <option category="A G2 F">Atikokan</option>
+                                    <option category="A G G2 M M2 F">Bancroft</option>
+                                    <option category="A G G2 M M2 F">Barrie</option>
+                                    <option category="G2">Barrys Bay</option>
+                                    <option category="A G G2 M M2 F">Belleville</option>
+                                    <option category="A G G2 M M2 F">Blind River</option>
+                                    <option category="A G G2 M M2 F">Brampton</option>
+                                    <option category="A G G2 M M2 F">Brantford</option>
+                                    <option category="A G G2 M M2 F">Brockville</option>
+                                    <option category="A G G2 M M2 F">Burlington</option>
+                                    <option category="G2">Carleton Place</option>
+                                    <option category="G2">Casselman</option>
+                                    <option category="A G2 F">Chapleau</option>
+                                    <option category="A G G2 M M2 F">Chatham</option>
+                                    <option category="A G G2 M2 F">Clinton</option>
+                                    <option category="A G2 F">Cochrane</option>
+                                    <option category="G G2">Collingwood</option>
+                                    <option category="A G G2 M M2 F">Cornwall</option>
+                                    <option category="A G G2 M M2 F">Dryden</option>
+                                    <option category="G2 F">Dubreuilville</option>
+                                    <option category="G2">Ear Falls</option>
+                                    <option category="A G G2 M M2 F">Elliott Lake</option>
+                                    <option category="A G G2 M M2 F">Espanola</option>
+                                    <option category="A G G2 M M2 F">Fort Frances</option>
+                                    <option category="A G2 M2 F">Geraldton</option>
+                                    <option category="A G G2 M M2 F">Guelph</option>
+                                    <option category="G2 M2 F">Haliburton</option>
+                                    <option category="A G G2 M M2 F">Hamilton</option>
+                                    <option category="A G G2 M M2 F">Hawkesbury</option>
+                                    <option category="A G G2 M M2 F">Hearst</option>
+                                    <option category="G2 F">Hornepayne</option>
+                                    <option category="A G G2 M M2 F">Huntsville</option>
+                                    <option category="G2">Ignace</option>
+                                    <option category="A G G2 M M2 F">Kapuskasing</option>
+                                    <option category="G2">Kemptville</option>
+                                    <option category="A G G2 M M2 F">Kenora</option>
+                                    <option category="A G G2 M M2 F">Kingston</option>
+                                    <option category="A G G2 M M2 F">Kirkland Lake</option>
+                                    <option category="A G G2 M M2 F">Kitchener</option>
+                                    <option category="G2">Leamington</option>
+                                    <option category="A G G2 M M2 F">Lindsay</option>
+                                    <option category="A G2 M2 F">Little Current</option>
+                                    <option category="A G G2 M M2 F">London</option>
+                                    <option category="G2">Madoc</option>
+                                    <option category="A G2 M2 F">Manitouwadge</option>
+                                    <option category="A G G2 M M2 F">Marathon</option>
+                                    <option category="G2 F">Mattawa</option>
+                                    <option category="A G G2 F">Moosonee</option>
+                                    <option category="A G G2 M M2 F">New Liskeard</option>
+                                    <option category="A G G2 M M2 F">Newmarket</option>
+                                    <option category="A G2 M2 F">Nipigon</option>
+                                    <option category="A G G2 M M2 F">North Bay</option>
+                                    <option category="G G2">Oakville</option>
+                                    <option category="A G G2 M2 F">Orangeville</option>
+                                    <option category="A G G2 M M2 F">Orillia</option>
+                                    <option category="A G G2 M M2 F">Oshawa</option>
+                                    <option category="G G2">Ottawa Canotek</option>
+                                    <option category="A G G2 M M2 F">Ottawa Walkley</option>
+                                    <option category="A G G2 M M2 F">Owen Sound</option>
+                                    <option category="A G G2 M M2 F">Parry Sound</option>
+                                    <option category="A G G2 M F">Pembroke</option>
+                                    <option category="A G G2 M M2 F">Peterborough</option>
+                                    <option category="A G2 F">Pickle Lake</option>
+                                    <option category="G G2">Port Hope</option>
+                                    <option category="G2">Rainy River</option>
+                                    <option category="A G2 F">Red Lake</option>
+                                    <option category="A G G2 M M2 F">Renfrew</option>
+                                    <option category="G2">Rockland</option>
+                                    <option category="A G G2 M2 F">Sarnia</option>
+                                    <option category="A G G2 M M2 F">Sault Ste Marie</option>
+                                    <option category="A G2 M2 F">Schreiber</option>
+                                    <option category="A G G2 M2 F">Simcoe</option>
+                                    <option category="G2">Sioux Lookout</option>
+                                    <option category="A G G2 M M2 F">Smiths Falls</option>
+                                    <option category="A G G2 M M2 F">St Catharines</option>
+                                    <option category="G G2 M2 F">Stratford</option>
+                                    <option category="A G G2 M M2 F">Sudbury</option>
+                                    <option category="G2 F">Sundridge</option>
+                                    <option category="G2 F">Thessalon</option>
+                                    <option category="A G G2 M M2 F">Thunder Bay</option>
+                                    <option category="A G G2 M2 F">Tillsonburg</option>
+                                    <option category="A G G2 M M2 F">Timmins</option>
+                                    <option category="A G G2 M F">Toronto Downsview</option>
+                                    <option category="G G2">Toronto Etobicoke</option>
+                                    <option category="G G2 M M2">Toronto Metro East</option>
+                                    <option category="G G2">Toronto Port Union</option>
+                                    <option category="A G G2 M M2 F">Walkerton</option>
+                                    <option category="A G G2 M M2 F">Wawa</option>
+                                    <option category="G2">Westport</option>
+                                    <option category="G2 F">White River</option>
+                                    <option category="G2">Winchester</option>
+                                    <option category="A G G2 M M2 F">Windsor</option>
+                                    <option category="A G G2 M2 F">Woodstock</option>
+                                </select>
                             </div>
                             <div class="time">
                                 <div class="from no-margin-left">
