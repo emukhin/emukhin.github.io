@@ -4,7 +4,7 @@ jQuery(function(){
     $.ajax({
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         type: "POST",
-        url: "https://drivetest.pagekite.me/myapp/rest/admin",
+        url: "https://bookroadtest.ngrok.io/myapp/rest/admin",
         data: { admin_token: localStorage.getItem("admin_token") }
     }).done(function(data, textStatus, jqXHR) {
         console.log(jqXHR.responseText);
