@@ -94,7 +94,7 @@
                                     <select id="class" required class="selectpicker form-control" data-live-search="true" data-validation-error-msg="What class of road test would you like to book?">
                                         <option>Class 5</option>
                                         <option>Class 6</option>
-                                        <option>Class 7</option>
+                                        <option selected>Class 7</option>
                                         <option>Class 8</option>
                                         <option>MST</option>
                                     </select>
@@ -110,6 +110,13 @@
                                         <input data-validation="email" id="email" type="email" class="form-control" placeholder="name@email.com" required data-validation-error-msg="Email address is required">
                                     </div>
                                 </div>
+                                <div id="course" class="hidden">
+                                    <p>Did you complete an ICBC-approved driver education course during your learner period that was started on or after April 1, 2007 as part of the Graduated Licencing Program (GLP) AND have you remained violation and at-fault crash free while you have been in the GLP Novice stage?</p>
+                                    <div align="center">
+                                        <label class="radio-inline"><input type="radio" required name="radio-course" value="1" data-validation-error-msg="Driver education course answer is required">Yes</label>
+                                        <label class="radio-inline"><input type="radio" required name="radio-course" value="0" data-validation-error-msg="Driver education course answer is required">No</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-4 hidden-xs">
                                 <ul id="bullets">
@@ -121,7 +128,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <p><em>Double-check. Are your details accurate? Great!</em></p>
+                        <p class="top-30"><em>Double-check. Are your details accurate? Great!</em></p>
                         <h3>Next, tell us where and when you want to take your road test.</h3>
                         <div class="row">
                             <div class="form-group col-xs-12">
