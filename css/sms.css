@@ -1,0 +1,30 @@
+.subscribe {
+    width: 220px;
+    margin: auto;
+}
+
+.subscribe .number {
+    width: 150px;
+    float: left;
+}
+
+.subscribe .button {
+    float: left;
+}
+
+.subscribe button {
+    width: 55px;
+    margin-left: 15px;
+}
+
+@media all and (min-width: 768px) {
+    .row .form-group.text-center {
+        text-align: right;
+    }
+
+    .subscribe {
+        float: left !important;
+    }
+}
+
+
