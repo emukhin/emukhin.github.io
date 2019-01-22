@@ -32,7 +32,7 @@
 }
 
 .form-control {
-    border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .has-warning .form-control {
@@ -74,11 +74,15 @@
 
 .card-date {
     display: flex;
+    display: -ms-flexbox;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 }
 
 div#exp-date {
     display: inline-flex;
+    display: -ms-inline-flexbox;
+    min-width: 100%;
 }
 
 #card-number {
