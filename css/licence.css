@@ -1,0 +1,53 @@
+.top {
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    background-color: #fff;
+    height: 30px;
+}
+
+.img-container img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.img-container img.paper {
+    border-radius: 8px;
+}
+
+.img-container img.plastic {
+    border-radius: 22px;
+}
+
+.row h1 {
+    margin-right: 15px!important;
+    margin-left: 15px!important;
+}
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+    img.plastic {
+        max-width: 70%;
+        border-radius: 8px!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    img.paper {
+        max-width: 100%;
+    }
+    img.plastic {
+        max-width: 50%;
+        border-radius: 15px!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}
+
+#licenceNumber, #licenceExpiryDate {
+    max-width: 300px;
+}
