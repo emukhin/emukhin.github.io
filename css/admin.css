@@ -24,12 +24,12 @@
   margin-bottom: 0px!important;
 }
 
-#periods:first-of-type {
+.period:first-of-type {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-#periods:last-of-type {
+.period:last-of-type {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
