@@ -29,9 +29,13 @@
   border-top-right-radius: 5px;
 }
 
-.period.last {
+#periods>div:last-of-type {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+td[scope='row'] {
+  border-top: 0!important;
 }
 
 /** SPINNER CREATION **/
