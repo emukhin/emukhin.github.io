@@ -67,41 +67,6 @@
                     <div id="video">
                         <div class="embed-responsive embed-responsive-16by9">
                             <div id="youTubePlayer" class="embed-responsive-item"></div>
-                            <script>
-                                var tag = document.createElement('script');
-                                tag.src = "https://www.youtube.com/iframe_api";
-                                var firstScriptTag = document.getElementsByTagName('script')[0];
-                                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                                var player;
-                                function onYouTubeIframeAPIReady() {
-                                    player = new YT.Player('youTubePlayer', {
-                                        videoId: '6-pPUAOfIU8',
-                                        title: 'Drive Test Booking',
-                                        events: {
-                                            'onReady': onPlayerReady,
-                                            'onStateChange': onPlayerStateChange
-                                        }
-                                    });
-                                }
-
-                                function onPlayerReady(event) {
-                                }
-
-                                function onPlayerStateChange(event) {
-                                    if (event.data == YT.PlayerState.PLAYING) {
-                                        ga('send', 'event', 'Videos', 'Play', 'Video started');
-                                    }
-
-                                    if (event.data == YT.PlayerState.PAUSED) {
-                                        ga('send', 'event', 'Videos', 'Pause', 'Video paused');
-                                    }
-
-                                    if (event.data == YT.PlayerState.ENDED) {
-                                        ga('send', 'event', 'Videos', 'Finished', 'Video watched to end');
-                                    }
-                                }
-                            </script>
                         </div>
                     </div>
                     <div id="desc">
@@ -462,5 +427,40 @@
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="js/core.min.js?v=22"></script>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youTubePlayer', {
+                videoId: '6-pPUAOfIU8',
+                title: 'Drive Test Booking',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                ga('send', 'event', 'Videos', 'Play', 'Video started');
+            }
+
+            if (event.data == YT.PlayerState.PAUSED) {
+                ga('send', 'event', 'Videos', 'Pause', 'Video paused');
+            }
+
+            if (event.data == YT.PlayerState.ENDED) {
+                ga('send', 'event', 'Videos', 'Finished', 'Video watched to end');
+            }
+        }
+    </script>
 </body>
 </html>
