@@ -43,18 +43,6 @@
         display: none;
     }
 
-    .license label[for='licenceNumber']:after {
-        content: 'Licence Number';
-    }
-
-    .expiry label[for='licenceExpiryDate']:after {
-        content: 'Licence Expiry';
-    }
-
-    .col-xs-3 label[for='class']:after {
-        content: 'Class';
-    }
-
     .no-padding-right {
         padding-right: 0px !important;
     }
