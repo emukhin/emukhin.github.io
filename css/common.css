@@ -173,6 +173,7 @@ input[type=text], input[type=tel], input[type=email] {
 .footer {
     padding: 5px;
     margin-top: 35px;
+    color: #595959;
 }
 
 .top-30 {
