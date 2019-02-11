@@ -114,6 +114,13 @@ div#exp-date {
     }
 }
 
+@media all and (max-width: 823px) {
+    .panel-group {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 @media all and (min-width: 412px) and (max-width: 1199px) {
     .card-block * {
         font-size: 13px;
@@ -139,10 +146,49 @@ div#exp-date {
 #government_fee_paid {
     border-bottom: 1px dashed #999;
     text-decoration: none;
+    font-size: 10px
 }
 
 .card {
     border: 1px solid #ccc;
+}
+
+.payment_instrument_logos img {
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    margin: 5px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#payment {
+    margin-top: 30px;
+}
+#payment .panel {
+    border: thin solid #eee;
+}
+#payment .panel-body {
+    border: thin solid #eee;
+    border: 0;
+}
+
+.panel-body > div {
+    margin-bottom: 30px;
+}
+
+.panel-collapse {
+    border: 0;
+}
+
+#payment .panel-heading {
+    padding: 5px 10px;
+    background-color: #fafdff;
+    border-bottom: thin solid #eee;
+}
+
+#payment img.braintree {
+    border: 1px solid #eee;
+    border-radius: 5px;
 }
 
 #paid span{

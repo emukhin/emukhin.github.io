@@ -15,7 +15,7 @@
     <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Roboto+Condensed">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
     <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=7">
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/payment.css?v=5">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/payment.css?v=6">
     <script>
         /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
         (function(w){
@@ -186,12 +186,12 @@
                 <div style="margin-bottom: -35px">
                     <div class="row">
                         <div class="col-xs-12 text-center">
-                            <h1>We have received your order.</h1>
+                            <h1>We have received your order</h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 text-center">
-                            <b>We'll get started processing as soon as you make the payment.</b>
+                            <b>We'll get started processing as soon as you make the payment</b>
                         </div>
                     </div>
                     <div class="row">
@@ -244,40 +244,102 @@
                         </div>
                     </div>
                     <div id="payment">
-                        <div class="payment-options text-center">
-                            <span>We only accept <strong>Visa</strong> and <strong>MasterCard</strong> debit or credit cards through this form</span>
-                        </div>
-                        <form action="/" id="my-sample-form" method="post">
-                            <div class="card-block">
-                                <div class="card front">
-                                    <div class="number form-groups">
-                                        <label for="card-number">Card Number</label>
-                                        <div id="card-number" class="form-control"></div>
-                                        <div id="card-image"></div>
-                                    </div>
-                                    <div class="card-date form-groups">
-                                        <label for="expiration-month">Expiration Date</label>
-                                        <div id="exp-date">
-                                            <div id="expiration-month" class="form-control"></div>
-                                            <span id="separator">/</span>
-                                            <div id="expiration-year" class="form-control"></div>
+                        <div class="row">
+                            <div class="panel-group col-xs-12 col-sm-10 col-sm-offset-1" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="payment_instrument_logos">
+                                                <img alt="MasterCard" src="images/mastercard.png"><img alt="Visa" src="images/visa.png">
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="text-center">
+                                            <a href="https://www.braintreegateway.com/merchants/m6gvsxwk3qx8sqh9/verified" target="_blank">
+                                                <img class="braintree" src="https://s3.amazonaws.com/braintree-badges/braintree-badge-wide-light.png" width="196px" height ="30px"/>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <form action="/" id="my-sample-form" method="post">
+                                            <div class="card-block">
+                                                <div class="card front">
+                                                    <div class="number form-groups">
+                                                        <label for="card-number">Card Number</label>
+                                                        <div id="card-number" class="form-control"></div>
+                                                        <div id="card-image"></div>
+                                                    </div>
+                                                    <div class="card-date form-groups">
+                                                        <label for="expiration-month">Expiration Date</label>
+                                                        <div id="exp-date">
+                                                            <div id="expiration-month" class="form-control"></div>
+                                                            <span id="separator">/</span>
+                                                            <div id="expiration-year" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card back">
+                                                    <div class="magnetic"></div>
+                                                    <div class="form-groups cvv">
+                                                        <label for="cvv">CVC/CVV</label>
+                                                        <div id="cvv" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex" style="justify-content: center;">
+                                                <button id="braintree-button" disabled type="submit" data-loading-text="Processing..." class="btn btn-md btn-block btn-success">Pay Now</button>
+                                            </div>
+                                        </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card back">
-                                    <div class="magnetic"></div>
-                                    <div class="form-groups cvv">
-                                        <label for="cvv">CVC/CVV</label>
-                                        <div id="cvv" class="form-control"></div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <div class="payment_instrument_logos">
+                                                <img alt="Interac" src="images/interac.png">
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <p>To pay through Interac e-Transfer you need to:</p>
+                                        <ul>
+                                            <li>Log in to your bank account and go to Interac section</li>
+                                            <li>Add info@bookroadtest.ca as a recipient</li>
+                                            <li>Put '<span id="orderId"></span>' as the message. This is your order number.</li>
+                                        </ul>
+                                        <br>
+                                        <p>Payments are processed automatically & you'll receive a confirmation that your request has started processing once the confirmation hits out mailbox.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex" style="justify-content: center;">
-                                <button id="braintree-button" disabled type="submit" data-loading-text="Processing..." class="btn btn-md btn-block btn-success">Pay Now</button>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <div class="payment_instrument_logos">
+                                                <img alt="PayPal" src="images/paypal.png">
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <div id="paypal" class="payment-options text-center hidden">
+                                            <p>PayPal makes possible to pay with PayPal itself and also Visa, MasterCard, Discover or American Express</p>
+                                            <p>To initiate the payment through PayPal click <a href="javascript:" id="paypal-button">here</a></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
-                        <div id="paypal" class="payment-options text-center hidden">
-                            <span>For other payment options (PayPal, Visa, MasterCard, Discover or American Express) click <a href="javascript:" id="paypal-button">here</a>.</span>
+                        </div>
                         </div>
                     </div>
                     <!--googleoff: all-->
@@ -314,6 +376,6 @@
     <script src="https://js.braintreegateway.com/web/3.19.1/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.19.1/js/paypal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous"></script>
-    <script src="js/payment.min.js?v=24"></script>
+    <script src="js/payment.min.js?v=25"></script>
 </body>
 </html>
