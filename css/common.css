@@ -176,6 +176,18 @@ input[type=text], input[type=tel], input[type=email] {
     color: #595959;
 }
 
+.address {
+    margin-top: 5px;
+    color: #777;
+    font-size: 13px;
+}
+
+.sm .address {
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
 .top-30 {
     margin-top: 30px !important;
 }
