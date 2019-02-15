@@ -16,6 +16,10 @@
     height: 30px;
 }
 
+#book_dialog {
+  overflow: hidden;
+}
+
 #save-periods {
   margin-top: 10px;
 }
