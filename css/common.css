@@ -110,9 +110,11 @@ input[type=text], input[type=tel], input[type=email] {
     h1 {
         font-size: 20px !important;
     }
-
     .sm {
         font-size: 13px;
+    }
+    .sm .address {
+        font-size: 12px;
     }
 }
 
@@ -178,14 +180,7 @@ input[type=text], input[type=tel], input[type=email] {
 
 .address {
     margin-top: 5px;
-    color: #777;
     font-size: 13px;
-}
-
-.sm .address {
-    margin-top: 5px;
-    color: #777;
-    font-size: 12px;
 }
 
 .top-30 {
