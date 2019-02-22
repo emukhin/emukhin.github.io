@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
     <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=9">
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/g2.css?v=4">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/g2.css?v=5">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -147,7 +147,9 @@
                         </div>
                         <div class="row period">
                             <div class="location">
-                                <select id="locationPicker" data-hide-disabled="true" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="auto" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                                <select id="locationPicker" data-hide-disabled="true" multiple data-actions-box="true" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="auto" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                                    <option class="special btn btn-lg btn-primary" category="A G G2 M M2 F">Pick nearby (less then hour drive)</option>
+                                    <option category="A G G2 M M2 F" data-divider="true"></option>
                                     <option category="G2">Arnprior</option>
                                     <option category="A G2 F">Atikokan</option>
                                     <option category="A G G2 M M2 F">Bancroft</option>
@@ -277,6 +279,12 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 <p class="text-center"><strong>Error!</strong> Please, try again later or contact us.</p>
+                            </div>
+                            <div id="warning" class="alert alert-warning collapse" role="alert">
+                                <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <p class="text-center"></p>
                             </div>
                         </div>
                     </div>
@@ -431,6 +439,8 @@
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="js/core.min.js?v=26"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCseUybif0zanq_J0R1148bWZKJnZBeiuo" type="text/javascript"></script>
+    <script async defer src="js/distance.min.js?v=1"></script>
     <script>
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";

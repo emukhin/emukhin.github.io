@@ -71,6 +71,27 @@
     }
 }
 
+.special {
+    color: #fff!important;
+    font-size: 14px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 15px;
+    padding: 8px!important;
+}
+.special:hover {
+    background-color: #286090!important;
+    border-color: #204d74!important;
+}
+
+.bs-select-all {
+    display: none;
+}
+.bs-actionsbox > .btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .period {
     display: flex;
     flex-wrap: wrap;
