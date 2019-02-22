@@ -71,6 +71,56 @@
     }
 }
 
+[tooltip]{
+    position:relative;
+    display:inline-block;
+}
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top:-6px;
+    left:80%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.7) transparent transparent transparent;
+    z-index: 99;
+    opacity:1;
+}
+.periods > .period ~ .period [tooltip]::before {
+    opacity:0;
+}
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left:50%;
+    top:-6px;
+    transform: translateX(-50%)   translateY(-100%);
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;
+    padding:4px 2px;
+    font-size: 12px;
+    width: 150px;
+    border-radius: 5px;
+    //pointer-events: none;
+    z-index:99;
+    opacity:1;
+}
+.periods > .period ~ .period [tooltip]::after {
+    opacity:0;
+}
+[tooltip-position='top']::after{
+    left:70%;
+}
+
+[tooltip]:hover::after,[tooltip]:hover::before {
+    opacity:1
+}
+.periods > .period ~ .period [tooltip]:hover::after, .periods > .period ~ .period [tooltip]:hover::before {
+    opacity:0;
+}
+
 .special {
     color: #fff!important;
     font-size: 14px;
