@@ -182,7 +182,9 @@
                         </div>
                         <div class="row period">
                             <div class="location">
-                                <select id="locationPicker" data-hide-disabled="true" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="auto" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                                <select id="locationPicker" data-hide-disabled="true" multiple data-actions-box="true" class="selectpicker form-control" required multiple title="Select DriveTest Centres" data-size="auto" data-live-search="true" data-validation-error-msg="You did not select at least one location" >
+                                    <option class="special btn btn-lg btn-primary" category="A G G2 M M2 F">Pick nearby (less than hour drive)</option>
+                                    <option category="A G G2 M M2 F" data-divider="true"></option>
                                     <option category="G2">Arnprior</option>
                                     <option category="A G2 F">Atikokan</option>
                                     <option category="A G G2 M M2 F">Bancroft</option>
@@ -466,5 +468,7 @@
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="js/core.min.js?v=26"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCseUybif0zanq_J0R1148bWZKJnZBeiuo" type="text/javascript"></script>
+    <script async defer src="js/distance.min.js?v=1"></script>
 </body>
 </html>
