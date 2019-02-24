@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>Date range</title>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.jquery.min.css">
+    <script src="js/mobiscroll.jquery.min.js"></script>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        background: #5185a8;
+        color: #fff;
+        text-decoration: none;
+        font-family: arial, verdana, sans-serif;
+        font-size: 14px;
+    }
+    .demo-non-form {
+        color: initial;
+        width: 100%;
+        padding: 10px;
+        margin: 6px 0 12px 0;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        font-family: arial, verdana, sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+    }
+    
+    .demo-container {
+        padding: 0 1em;
+    }
+    
+    .external-container {
+        display: flex;
+    }
+    
+    .external-container button.external-button {
+        font-weight: 400;
+        padding: 10px;
+        margin: 6px 0 12px 16px;
+    }
+    </style>
+
+</head>
+<body>
+
+<div mbsc-page class="demo-date">
+    <div mbsc-form>
+        <div class="mbsc-align-center">
+            <div class="mbsc-note mbsc-note-primary">The range can be used inside a mobiscroll form or on any input.</div>
+        </div>
+        <div class="mbsc-form-group">
+            <div class="mbsc-form-group-title">Two inputs inside Mobiscroll Form</div>
+            <label>
+                From
+                <input id="start" placeholder="Please Select ..." readonly />
+            </label>
+            <label>
+                Until
+                <input id="end" placeholder="Please Select ..." readonly />        
+            </label>
+        </div>
+        <div class="mbsc-form-group">
+            <div class="mbsc-form-group-title">Date scroller</div>
+            <label>
+                From
+                <input id="startDate" placeholder="Please Select ..." readonly />
+            </label>
+            <label>
+                Until
+                <input id="endDate" placeholder="Please Select ..." readonly />        
+            </label>
+        </div>
+        <div id="demo"></div>
+        <div id="date"></div>
+        <div class="mbsc-form-group mbsc-padding">
+            <p class="mbsc-thin">Use it on any input or non-mobiscroll form.</p>
+        </div>
+    </div>
+    <div class="demo-container">
+        <label for="demo-non-form">Range</label>
+        <input id="demo-non-form" class="demo-non-form" placeholder="Please Select..." />
+        <label for="demo-external">Show on button click only</label>
+        <div class="external-container">
+            <input id="demo-external" class="demo-non-form" />
+            <button id="show" class="external-button">Show</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    mobiscroll.settings = {
+        theme: 'ios',
+        animate: 'slideup',
+        calendarScroll: 'vertical',
+        counter: true,
+        min: new Date(),
+        defaultValue: [ new Date(2019,1,25), new Date(2019,2,25) ],
+        months: 2,
+        // showLabel: true,
+        // labels: [
+        // {
+        //     d: '12/25',
+        //     text: 'Christmas',
+        //     color: 'red'
+        // }
+        // ],
+        marked: [
+            { d: '12/25', color: 'red' }],
+        responsive: {
+            small: {
+                display: 'bottom'
+            },
+            custom: { // Custom breakpoint
+                breakpoint: 600,
+                display: 'center'
+            },
+            large: {
+                display: 'bubble'
+            }
+        },
+        yearChange: false
+    };
+    
+    $(function () {
+        var now = new Date(),
+            week = [now, new Date(now.getFullYear(), now.getMonth(), now.getDate() + 6, 23, 59)];
+    
+        // Mobiscroll Range initialization
+        $('#demo').mobiscroll().range({
+            startInput: '#start',             // More info about startInput: https://docs.mobiscroll.com/4-5-3/range#opt-startInput
+            endInput: '#end'     ,             // More info about endInput: https://docs.mobiscroll.com/4-5-3/range#opt-endInput
+            yearChange: false
+        });
+    
+        // Mobiscroll Range initialization
+        $('#date').mobiscroll().range({
+            startInput: '#startDate',         // More info about startInput: https://docs.mobiscroll.com/4-5-3/range#opt-startInput
+            endInput: '#endDate',             // More info about endInput: https://docs.mobiscroll.com/4-5-3/range#opt-endInput
+            controls: ['date']   ,             // More info about controls: https://docs.mobiscroll.com/4-5-3/range#opt-controls
+            yearChange: false
+        });
+    
+        // Mobiscroll Range initialization
+        $('#demo-non-form').mobiscroll().range({
+            showSelector: false               // More info about showSelector: https://docs.mobiscroll.com/4-5-3/range#opt-showSelector
+        });
+    
+        // Mobiscroll Range initialization
+        $('#demo-external').mobiscroll().range({
+            showOnTap: false,                 // More info about showOnTap: https://docs.mobiscroll.com/4-5-3/range#opt-showOnTap
+            showOnFocus: false,               // More info about showOnFocus: https://docs.mobiscroll.com/4-5-3/range#opt-showOnFocus
+            showSelector: false,              // More info about showSelector: https://docs.mobiscroll.com/4-5-3/range#opt-showSelector
+            onInit: function (event, inst) {  // More info about onInit: https://docs.mobiscroll.com/4-5-3/range#event-onInit
+                inst.setVal(week, true);
+            }
+        });
+    
+        $('#show').click(function () {
+            $('#demo-external').mobiscroll('show');
+            return false;
+        });
+    
+    });
+</script>
+
+</body>
+</html>
