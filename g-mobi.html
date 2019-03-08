@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="Get your Ontario G road test booked online using our automatic booking 24/7 service. Name the date you'd like to have a road test, we'll take care of the rest.">
+    <title>Book G road test | Ontario</title>
+    <link rel="alternate" href="https://bookroadtest.ca/" hreflang="x-default" />
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-87014719-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <link rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=9">
+    <link href="css/mobiscroll.jquery.min.css" rel="stylesheet" type="text/css">
+    <link href="css/mobi.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="icon" href="images/favicon.png">
+    <script async type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+</head>
+<body>
+    <a id="checkout" href="payment" class="hidden"><div></div></a>
+    <div class="container">
+        <div class="shadow">
+            <div class="hidden-xs">
+                <div class="head-left"></div>
+                <div class="head-right"></div>
+                <div class="head-middle"></div>
+            </div>
+            <div class="site-content-wrapper">
+                <nav class="navbar navbar-default navbar-static-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-logo hidden-lg hidden-md hidden-sm">
+                                <img alt="Brand" src="images/logo.png" width="35">
+                                <b class="margin-left">Book a Road Test</b>
+                            </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="g1-knowledge-test" title="Knowledge Test (G1)">Knowledge Test</a></li>
+                                <li class="active"><a href="#" title="Book a Driving Test (G2, G, A etc.)">Book a Road Test</a></li>
+                                <li><a href="how-it-works" title="How it Works">How It Works</a></li>
+                                <li><a href="faq" title="FAQs">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="bottom-20">
+                    <h1>Want to book your Ontario G road test to an earlier date?</h1>
+                    <div id="video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div id="youTubePlayer" class="embed-responsive-item"></div>
+                            <script>
+                                const tag = document.createElement('script');
+                                tag.src = "https://www.youtube.com/iframe_api";
+                                const firstScriptTag = document.getElementsByTagName('script')[0];
+                                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                                let player;
+                                function onYouTubeIframeAPIReady() {
+                                    player = new YT.Player('youTubePlayer', {
+                                        videoId: '6-pPUAOfIU8',
+                                        title: 'Drive Test Booking',
+                                        events: {
+                                            'onStateChange': onPlayerStateChange
+                                        }
+                                    });
+                                }
+                                function onPlayerStateChange(event) {
+                                    if (event.data == YT.PlayerState.PLAYING) {
+                                        ga('send', 'event', 'Videos', 'Play', 'Video started');
+                                    }
+
+                                    if (event.data == YT.PlayerState.PAUSED) {
+                                        ga('send', 'event', 'Videos', 'Pause', 'Video paused');
+                                    }
+
+                                    if (event.data == YT.PlayerState.ENDED) {
+                                        ga('send', 'event', 'Videos', 'Finished', 'Video watched to end');
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div id="desc">
+                        <p>Many road test centres are fully booked for months in advance. If you need your license sooner, your only hope is to snap up a cancellation when it becomes available. But these openings don't last long, and you can't spend all of your time refreshing the DriveTest.ca appointment finder.</p>
+                        <p>Our unique software monitors cancellations in real-time, 24/7. We're constantly searching for openings, day and night, and we book your driver's test appointment the moment a slot that fits your request becomes available.</p>
+                        <p>When you book through our site, you only pay our variable booking fee if we find a booking that falls within your requested dates, at your preferred location.</p>
+                        <p>Save time and money by using our booking service.</p>
+                        <p>Read <a rel="nofollow" href="how-it-works">How It Works</a> and our <a rel="nofollow" href="faq">FAQs</a> to learn more about our best-in-class road test booking service.</p>
+                    </div>
+                    <br/>
+                    <h2 id="start">Try it Now!</h2>
+                </div>
+                <form method="post" id="order-form" mbsc-form novalidate>
+                    <h3>First, provide your data before booking.</h3>
+                    <p class="small">Enter your licence and contact info here & class of road test to book.</p>
+                    <p class="small"><span class="text-warning">Attention!</span> Use either the Date of Expiry of your plastic licence or the Issue Date of your paper (temporary) one.</p>
+                    <br/>
+                    <div class="row center">
+                        <div class="col-md-7 col-sm-6 col-xs-12 no-padding-side">
+                            <div class="col-sm-6 col-xs-12">
+                                <label>
+                                    Driver's Licence Number
+                                    <input type="text" name='licenceNumber' id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required autocomplete="off" placeholder="_____-_____-_____" maxlength="17">
+                                </label>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 no-padding-right expiry">
+                                <label>
+                                    Driver's Licence Expiry
+                                    <input type="tel" name='licenceExpiryDate' id="licenceExpiryDate" pattern="^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]{1}[0-9]{1}|3[0-1])$" required data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD">
+                                </label>
+                            </div>
+                            <div class="col-sm-4 col-xs-6 class">
+                                <label>
+                                    Road Test Class
+                                    <select id="class">
+                                        <optgroup label="Public">
+                                            <option>G</option>
+                                            <option>G2</option>
+                                            <option>M</option>
+                                            <option>M2</option>
+                                        </optgroup>
+                                        <optgroup label="Commercial">
+                                            <option>A</option>
+                                            <option>Az</option>
+                                            <option>B</option>
+                                            <option>Bz</option>
+                                            <option>C</option>
+                                            <option>Cz</option>
+                                            <option>D</option>
+                                            <option>Dz</option>
+                                            <option>E</option>
+                                            <option>Ez</option>
+                                            <option>F</option>
+                                            <option>Fz</option>
+                                            <option>Z</option>
+                                        </optgroup>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col-sm-8 col-xs-12 email">
+                                <label>Driver's email
+                                    <input data-icon='ion-ios7-at-outline' name='email' id="email" type="email" placeholder="name@email.com" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-6 col-xs-12 no-padding-side">
+                            <ul id="bullets">
+                                <li>Risk-Free: Full Refund Unless You Don't Get the Booking You Requested</li>
+                                <li>Straightforward and Simple</li>
+                                <li>Works 24/7 to Find Your Ideal Road Test</li>
+                                <li>Searches All Ontario Road Test Locations</li>
+                                <li>Safe and Secure</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p><em>Double-check. Are your details accurate? Great!</em></p>
+                    <h3>Next, tell us where and when you want to take your road test.</h3>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="small">
+                                <p>Using the fields below, choose your preferred DriveTest centre location(s). Then choose the period(s) within which you would like to take a road test.</p>
+                                <p>Choose one or many locations to increase your odds of finding an early booking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-description" class="mbsc-cloak">
+                        <div class="mbsc-align-center mbsc-padding">
+                            <p id="description"></p>
+                        </div>
+                    </div>
+                    <div class="periods">
+                        <div class="row period">
+                            <div class="location">
+                                <label>
+                                    Select DriveTest Centre(s)
+                                    <select name="locationPicker1" id="locationPicker1" required title="Select DriveTest Centres">
+                                    <optgroup label="Eastern">
+                                        <option category="G2">Arnprior</option>
+                                        <option category="A G G2 M M2 F">Bancroft</option>
+                                        <option category="G2">Barry's Bay</option>
+                                        <option category="A G G2 M M2 F">Belleville</option>
+                                        <option category="A G G2 M M2 F">Brockville</option>
+                                        <option category="G2">Carleton Place</option>
+                                        <option category="G2">Casselman</option>
+                                        <option category="A G G2 M M2 F">Cornwall</option>
+                                        <option category="A G G2 M M2 F">Hawkesbury</option>
+                                        <option category="G2">Kemptville</option>
+                                        <option category="A G G2 M M2 F">Kingston</option>
+                                        <option category="A G G2 M M2 F">Lindsay</option>
+                                        <option category="G2">Madoc</option>
+                                        <option category="G G2">Ottawa Canotek</option>
+                                        <option category="A G G2 M M2 F">Ottawa Walkley</option>
+                                        <option category="A G G2 M F">Pembroke</option>
+                                        <option category="A G G2 M M2 F">Peterborough</option>
+                                        <option category="G G2">Port Hope</option>
+                                        <option category="A G G2 M M2 F">Renfrew</option>
+                                        <option category="G2">Rockland</option>
+                                        <option category="A G G2 M M2 F">Smiths Falls</option>
+                                        <option category="G2">Westport</option>
+                                        <option category="G2">Winchester</option>
+                                    </optgroup>
+                                    <optgroup label="Northern">
+                                        <option category="A G2 F">Atikokan</option>
+                                        <option category="A G G2 M M2 F">Blind River</option>
+                                        <option category="A G2 F">Chapleau</option>
+                                        <option category="A G2 F">Cochrane</option>
+                                        <option category="A G G2 M M2 F">Dryden</option>
+                                        <option category="G2 F">Dubreuilville</option>
+                                        <option category="G2">Ear Falls</option>
+                                        <option category="A G G2 M M2 F">Elliott Lake</option>
+                                        <option category="A G G2 M M2 F">Espanola</option>
+                                        <option category="A G G2 M M2 F">Fort Frances</option>
+                                        <option category="A G2 M2 F">Geraldton</option>
+                                        <option category="G2 M2 F">Haliburton</option>
+                                        <option category="A G G2 M M2 F">Hearst</option>
+                                        <option category="G2 F">Hornepayne</option>
+                                        <option category="A G G2 M M2 F">Huntsville</option>
+                                        <option category="G2">Ignace</option>
+                                        <option category="A G G2 M M2 F">Kapuskasing</option>
+                                        <option category="A G G2 M M2 F">Kenora</option>
+                                        <option category="A G G2 M M2 F">Kirkland Lake</option>
+                                        <option category="A G2 M2 F">Little Current</option>
+                                        <option category="A G2 M2 F">Manitouwadge</option>
+                                        <option category="A G G2 M M2 F">Marathon</option>
+                                        <option category="G2 F">Mattawa</option>
+                                        <option category="A G G2 F">Moosonee</option>
+                                        <option category="A G G2 M M2 F">New Liskeard</option>
+                                        <option category="A G2 M2 F">Nipigon</option>
+                                        <option category="A G G2 M M2 F">North Bay</option>
+                                        <option category="A G G2 M M2 F">Parry Sound</option>
+                                        <option category="A G2 F">Pickle Lake</option>
+                                        <option category="G2">Rainy River</option>
+                                        <option category="A G2 F">Red Lake</option>
+                                        <option category="A G G2 M M2 F">Sault Ste Marie</option>
+                                        <option category="A G2 M2 F">Schreiber</option>
+                                        <option category="G2">Sioux Lookout</option>
+                                        <option category="A G G2 M M2 F">Sudbury</option>
+                                        <option category="G2 F">Sundridge</option>
+                                        <option category="G2 F">Thessalon</option>
+                                        <option category="A G G2 M M2 F">Thunder Bay</option>
+                                        <option category="A G G2 M M2 F">Timmins</option>
+                                        <option category="A G G2 M M2 F">Wawa</option>
+                                        <option category="G2 F">White River</option>
+                                    </optgroup>
+                                    <optgroup label="Western">
+                                        <option category="A G G2 M M2 F">Barrie</option>
+                                        <option category="A G G2 M2 F">Clinton</option>
+                                        <option category="G G2">Collingwood</option>
+                                        <option category="A G G2 M M2 F">Guelph</option>
+                                        <option category="A G G2 M M2 F">Kitchener</option>
+                                        <option category="A G G2 M2 F">Orangeville</option>
+                                        <option category="A G G2 M M2 F">Orillia</option>
+                                        <option category="A G G2 M M2 F">Owen Sound</option>
+                                        <option category="G G2 M2 F">Stratford</option>
+                                        <option category="A G G2 M M2 F">Walkerton</option>
+                                        <option category="A G G2 M2 F">Woodstock</option>
+                                    </optgroup>
+                                    <optgroup label="Central">
+                                        <option category="A G G2 M M2 F">Brampton</option>
+                                        <option category="A G G2 M M2 F">Burlington</option>
+                                        <option category="A G G2 M M2 F">Mississauga</option>
+                                        <option category="A G G2 M M2 F">Newmarket</option>
+                                        <option category="G G2">Oakville</option>
+                                        <option category="A G G2 M M2 F">Oshawa</option>
+                                        <option category="A G G2 M F">Toronto Downsview</option>
+                                        <option category="G G2">Toronto Etobicoke</option>
+                                        <option category="G G2 M M2">Toronto Metro East</option>
+                                        <option category="G G2">Toronto Port Union</option>
+                                    </optgroup>
+                                    <optgroup label="Southern">
+                                        <option category="A G G2 M M2 F">Brantford</option>
+                                        <option category="A G G2 M M2 F">Chatham</option>
+                                        <option category="A G G2 M M2 F">Hamilton</option>
+                                        <option category="G2">Leamington</option>
+                                        <option category="A G G2 M M2 F">London</option>
+                                        <option category="A G G2 M2 F">Sarnia</option>
+                                        <option category="A G G2 M2 F">Simcoe</option>
+                                        <option category="A G G2 M M2 F">St Catharines</option>
+                                        <option category="A G G2 M2 F">Tillsonburg</option>
+                                        <option category="A G G2 M M2 F">Windsor</option>
+                                    </optgroup>
+                                </select>
+                                </label>
+                            </div>
+                            <div class="time">
+                                <div class="from no-margin-left">
+                                    <label>Select date range
+                                        <input name='datePicker1' id='datePicker1' type="text" required>
+                                    </label>
+                                </div>
+                                <div class="add-remove">
+                                    <button id="addPeriod" type="button" class="margin-left-15 mbsc-btn-light" data-icon="arrow-down5" title="Add another period"></button>
+                                    <button id="removePeriod" type="button" class="margin-left hidden mbsc-btn-light" data-icon="arrow-up5" title="Remove period"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom-20 top-30">
+                        <div class="checkbox small text-center">
+                            <span>By submitting, I agree to the <a href="terms-of-use" target="_blank">terms of use</a></span>
+                        </div>
+                        <div class="text-center">
+                            <!--<button id="submit" type="submit" data-loading-text="Submitting..." class="mbsc-btn-primary"><strong>BOOK A ROAD TEST</strong></button>-->
+                            <button id="submit" type="submit" data-loading-text="Submitting..." class="mbsc-btn-primary"><strong>BOOK A ROAD TEST</strong></button>
+                        </div>
+                    </div>
+                </form>
+                <!--googleoff: all-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="error" class="alert alert-danger collapse" role="alert">
+                            <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <p class="text-center"><strong>Error!</strong> Please, try again later or contact us.</p>
+                        </div>
+                        <div id="warning" class="alert alert-warning collapse" role="alert">
+                            <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <p class="text-center"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--googleon: all-->
+                <div class="footer text-center sm">
+                    <hr>
+                    <span>Email us at</span>
+                    <a href='mailto:info@bookroadtest.ca'>info@bookroadtest.ca</a>
+                    <span>with any questions</span>
+                    <div class="address">
+                        <div>1 King Street W Suite 4800 – 108 Toronto, ON M5H 1A1</div>
+                        <div>©2016-2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+    <script>
+        /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+        (function(w){
+            "use strict";
+            /* exported loadCSS */
+            var loadCSS = function( href, before, media ){
+                // Arguments explained:
+                // `href` [REQUIRED] is the URL for your CSS file.
+                // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+                    // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+                // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+                var doc = w.document;
+                var ss = doc.createElement( "link" );
+                var ref;
+                if( before ){
+                    ref = before;
+                }
+                else {
+                    var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+                    ref = refs[ refs.length - 1];
+                }
+
+                var sheets = doc.styleSheets;
+                ss.rel = "stylesheet";
+                ss.href = href;
+                // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+                ss.media = "only x";
+
+                // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+                function ready( cb ){
+                    if( doc.body ){
+                        return cb();
+                    }
+                    setTimeout(function(){
+                        ready( cb );
+                    });
+                }
+                // Inject link
+                    // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+                    // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+                ready( function(){
+                    ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+                });
+                // A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+                var onloadcssdefined = function( cb ){
+                    var resolvedHref = ss.href;
+                    var i = sheets.length;
+                    while( i-- ){
+                        if( sheets[ i ].href === resolvedHref ){
+                            return cb();
+                        }
+                    }
+                    setTimeout(function() {
+                        onloadcssdefined( cb );
+                    });
+                };
+
+                function loadCB(){
+                    if( ss.addEventListener ){
+                        ss.removeEventListener( "load", loadCB );
+                    }
+                    ss.media = media || "all";
+                }
+
+                // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+                if( ss.addEventListener ){
+                    ss.addEventListener( "load", loadCB);
+                }
+                ss.onloadcssdefined = onloadcssdefined;
+                onloadcssdefined( loadCB );
+                return ss;
+            };
+            // commonjs
+            if( typeof exports !== "undefined" ){
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }( typeof global !== "undefined" ? global : this ));
+
+        /*! CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT  */
+        (function( w ){
+          // rel=preload support test
+          if( !w.loadCSS ){
+            return;
+          }
+          var rp = loadCSS.relpreload = {};
+          rp.support = function(){
+            try {
+              return w.document.createElement( "link" ).relList.supports( "preload" );
+            } catch (e) {
+              return false;
+            }
+          };
+
+          // loop preload links and fetch using loadCSS
+          rp.poly = function(){
+            var links = w.document.getElementsByTagName( "link" );
+            for( var i = 0; i < links.length; i++ ){
+              var link = links[ i ];
+              if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+                w.loadCSS( link.href, link );
+                link.rel = null;
+              }
+            }
+          };
+
+          // if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
+          if( !rp.support() ){
+            rp.poly();
+            var run = w.setInterval( rp.poly, 300 );
+            if( w.addEventListener ){
+              w.addEventListener( "load", function(){
+                w.clearInterval( run );
+              } );
+            }
+            if( w.attachEvent ){
+              w.attachEvent( "onload", function(){
+                w.clearInterval( run );
+              } )
+            }
+          }
+        }( this ));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/jquery.validate.js"></script>
+    <script src="js/mobiscroll.jquery.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/coremobi.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCseUybif0zanq_J0R1148bWZKJnZBeiuo" type="text/javascript"></script>
+    <script src="js/coremobi.min.js"></script>
+    <!--<script async defer src="js/distance.min.js?v=2"></script>-->
+</body>
+</html>

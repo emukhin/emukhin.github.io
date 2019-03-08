@@ -1,0 +1,220 @@
+input.mbsc-control {
+    height: 3em!important;
+}
+
+.period .mbsc-control-w,  .period .mbsc-control{
+    margin-bottom: 0!important;
+}
+
+div.mbsc-control-w, label.mbsc-control-w, button.mbsc-control {
+    margin-bottom: 15px;
+    margin-top: 0!important;
+}
+
+.mbsc-ic-ion-ios7-at-outline:before {
+    font-size: 1.7em;
+}
+
+.mbsc-input {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.mbsc-ios .mbsc-input input {
+    padding: 0.2em 1em;
+}
+
+.mbsc-err-msg {
+    bottom: -2em!important;
+}
+
+.mbsc-form {
+    font-size: inherit!important;
+    font-family: inherit!important;
+    background: inherit!important;
+    color: inherit!important;
+}
+
+#price_options > .mbsc-segmented {
+    background-color: #f7f7f7;
+    font-size: 1.2em;
+}
+
+#price_options .mbsc-segmented-content {
+    text-transform: none!important;
+    font-size: 1em!important;
+    height: 100%;
+    line-height: 1.7em!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mbsc-label {
+    line-height: 1.3em!important;
+    top: 0.45em!important;
+}
+
+.mbsc-form-group {
+    margin: 0!important;
+}
+
+.mbsc-label {
+    font-size: .8em!important;
+}
+
+.row.center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.add-remove > button {
+    border: 1px solid #ccc!important;
+}
+
+#licenceNumber {
+    text-transform:uppercase;
+}
+
+#nearby {
+    margin-bottom: 0;
+}
+#nearby > span:before {
+    font-size: 24px;
+}
+
+a {
+    color: #337ab7!important;
+}
+
+#submit {
+    background-color: #337ab7!important;
+    border-color: #2e6da4!important;
+}
+/*===================================================*/
+
+
+#bullets {
+    padding-right: 15px;
+    margin-bottom: 1.5em;
+    padding-inline-start: 30px
+}
+
+#bullets li {
+    padding: 1px;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 991px){
+    div.class {
+        width: 40%!important;
+    }
+    div.email {
+        width: 60%!important;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .period .location {
+        flex: 1 1 50% !important;
+    }
+    .no-padding-side {
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .add-remove button {
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+    }
+
+    .period .time .from {
+        flex: 1 0 190px !important;
+    }
+}
+
+@media all and (max-width: 667px) {
+    .no-padding-right {
+        padding-right: 0!important;
+    }
+
+    .col-xs-6.expiry {
+        width: 54%;
+    }
+    .col-xs-6.class {
+        width: 46%;
+    }
+
+    .no-margin-left {
+        margin-left: 0!important;
+    }
+
+    .period .location {
+        max-width: 100% !important;
+        padding-bottom: 14px;
+    }
+
+    #video {
+        width: 100% !important;
+        padding-right: 0px !important;
+    }
+}
+
+.margin-left {
+    margin-left: 8px!important;
+}
+
+.margin-left-15 {
+    margin-left: 15px!important;
+}
+
+.bottom-20 {
+    margin-bottom: 20px !important;
+}
+
+.period {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 12px 15px 15px;
+    background-color: #eeeeee;
+}
+
+.period .location {
+    flex: 1 auto;
+}
+
+.period .time {
+    display: flex;
+    flex: 1 1 330px;
+    max-width: 352px;
+}
+
+.period .time .from {
+    flex: 1 190px;
+    margin-left: 15px;
+}
+
+.add-remove {
+    display: inline-flex;
+}
+
+.add-remove button {
+    margin-right: 0!important;
+}
+
+#addPeriod, #removePeriod {
+    flex: 1 1 35px;
+}
+
+.order-form .flex {
+    align-items: center;
+}
+
+#video {
+    float: left;
+    width: 58%;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
