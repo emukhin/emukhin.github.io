@@ -325,8 +325,8 @@ $(function(){
                             }
                             if (output.length > 0) {
                                 $(".special").removeClass("disabled");
-                                $('#locationPicker').selectpicker('val', output);
-                                $('#locationPicker').selectpicker('toggle');
+                                $('#locationPicker1').selectpicker('val', output);
+                                $('#locationPicker1').selectpicker('toggle');
                             } else {
                                 disableGeo();
                                 handleLocationError("No DriveTest centres found withing 1 hour drive from your location. Pick your preferred locations manually.");
