@@ -156,7 +156,7 @@
                             </div>
                             <div class="col-sm-8 col-xs-12 email">
                                 <label>Driver's email
-                                    <input data-icon='ion-ios7-at-outline' name='email' id="email" type="email" placeholder="name@email.com" required>
+                                    <input name='email' id="email" type="email" placeholder="name@email.com" required>
                                 </label>
                             </div>
                         </div>
@@ -178,11 +178,6 @@
                                 <p>Using the fields below, choose your preferred DriveTest centre location(s). Then choose the period(s) within which you would like to take a road test.</p>
                                 <p>Choose one or many locations to increase your odds of finding an early booking.</p>
                             </div>
-                        </div>
-                    </div>
-                    <div id="price-description" class="mbsc-cloak">
-                        <div class="mbsc-align-center mbsc-padding">
-                            <p id="description"></p>
                         </div>
                     </div>
                     <div class="periods">
@@ -308,7 +303,20 @@
                                 <div class="add-remove">
                                     <button id="addPeriod" type="button" class="margin-left-15 mbsc-btn-light" data-icon="arrow-down5" title="Add another period"></button>
                                     <button id="removePeriod" type="button" class="margin-left hidden mbsc-btn-light" data-icon="arrow-up5" title="Remove period"></button>
+
                                 </div>
+
+                            </div>
+
+                        </div>
+                        <div class="period-popup">
+                            <p>Add periods for non-consequent date ranges.</p>
+                            <p>e.g. for Mondays in March you'll need 4 periods:</p>
+                            <div class="text-center">
+                                <p>03/04/2019 - 03/04/2019</p>
+                                <p>03/11/2019 - 03/11/2019</p>
+                                <p>03/18/2019 - 03/18/2019</p>
+                                <p>03/25/2019 - 03/25/2019</p>
                             </div>
                         </div>
                     </div>
@@ -317,7 +325,6 @@
                             <span>By submitting, I agree to the <a href="terms-of-use" target="_blank">terms of use</a></span>
                         </div>
                         <div class="text-center">
-                            <!--<button id="submit" type="submit" data-loading-text="Submitting..." class="mbsc-btn-primary"><strong>BOOK A ROAD TEST</strong></button>-->
                             <button id="submit" type="submit" data-loading-text="Submitting..." class="mbsc-btn-primary"><strong>BOOK A ROAD TEST</strong></button>
                         </div>
                     </div>

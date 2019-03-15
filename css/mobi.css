@@ -28,6 +28,9 @@ div.mbsc-control-w, label.mbsc-control-w, button.mbsc-control {
     bottom: -2em!important;
 }
 
+.mbsc-form input {
+    font-size: 16px;
+}
 .mbsc-form {
     font-size: inherit!important;
     font-family: inherit!important;
@@ -115,28 +118,41 @@ a {
     }
 }
 
-@media all and (max-width: 768px) {
-    .period .location {
-        flex: 1 1 50% !important;
-    }
-    .no-padding-side {
-        padding-right: 0!important;
-        padding-left: 0!important;
+@media all and (max-width: 376px) and (min-width: 321px) {
+    .add-remove button {
+        padding-left: 11px !important;
+        padding-right: 11px !important;
     }
 }
 
 @media all and (max-width: 320px) {
-    .add-remove button {
-        padding-left: 5px!important;
-        padding-right: 5px!important;
+    .period input {
+        font-size: 13px;
     }
-
-    .period .time .from {
-        flex: 1 0 190px !important;
+    .add-remove button {
+        padding-left: 7px!important;
+        padding-right: 7px!important;
+    }
+    .period .location {
+        max-width: 100% !important;
+        padding-bottom: 14px;
+        min-width: 260px!important;
     }
 }
 
-@media all and (max-width: 667px) {
+@media all and (max-width: 722px) {
+    .no-padding-side {
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
+    .period .time .from {
+        flex: 1 1 220px !important;
+        min-width: 180px!important;
+    }
+    .period .time {
+        flex: 1 1 330px!important;
+    }
+
     .no-padding-right {
         padding-right: 0!important;
     }
@@ -155,11 +171,12 @@ a {
     .period .location {
         max-width: 100% !important;
         padding-bottom: 14px;
+        min-width: 350px;
     }
 
     #video {
         width: 100% !important;
-        padding-right: 0px !important;
+        padding-right: 0!important;
     }
 }
 
@@ -184,17 +201,18 @@ a {
 
 .period .location {
     flex: 1 auto;
+    min-width: 300px;
 }
 
 .period .time {
     display: flex;
-    flex: 1 1 330px;
-    max-width: 352px;
+    flex: 0 1 217px;
 }
 
 .period .time .from {
-    flex: 1 190px;
+    flex: 1 217px;
     margin-left: 15px;
+    min-width: 217px;
 }
 
 .add-remove {
@@ -218,4 +236,36 @@ a {
     width: 58%;
     padding-right: 20px;
     margin-bottom: 10px;
+}
+
+.periods {
+    position: relative; //todo удалить это для тултипа
+}
+.period-popup {
+    right: 0;
+    position: absolute;
+    display: none;
+    padding: 15px 15px 0;
+    font-size: 1.1rem;
+    z-index: 2;
+    background: #0093f3;
+    color: #fcfdff;
+    border-radius: 10px;
+    border: 1px solid #2b93e6;
+    box-shadow: 0 0 10px rgba(43,147,230,.3);
+    transition: opacity 300ms linear,visibility 0s linear 300ms;
+
+}
+.period-popup:after {
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-bottom: 13px solid #0093f3;
+    border-left: 10px solid transparent;
+    top: -14px;
+    right: 16px;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
 }
