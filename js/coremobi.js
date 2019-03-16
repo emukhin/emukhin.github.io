@@ -236,6 +236,7 @@ $(function(){
             responsive: {
                 xsmall: { //0px
                     display: 'bottom',
+                    group: false,
                     animate: 'slideup'
                 },
                 large: { //992px
