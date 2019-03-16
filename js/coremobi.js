@@ -319,14 +319,12 @@ $(function(){
                             let results = response.rows[0].elements;
                             let output = [];
                             for (let i=0; i<results.length; i++) {
-                                //console.log(filtered_locations[i].name+" - "+results[i].duration_in_traffic.text);
                                 if(results[i].duration_in_traffic.value <= minutes*60)
                                     output.push(filtered_locations[i].name);
                             }
                             if (output.length > 0) {
-                                $(".special").removeClass("disabled");
-                                $('#locationPicker1').selectpicker('val', output);
-                                $('#locationPicker1').selectpicker('toggle');
+                                $('#locationPicker1').mobiscroll('setVal', output);
+                                $('#locationPicker1').mobiscroll('hide');
                             } else {
                                 disableGeo();
                                 handleLocationError("No DriveTest centres found withing 1 hour drive from your location. Pick your preferred locations manually.");
@@ -363,7 +361,7 @@ $(function(){
             $("#checkout").removeClass("hidden");
 
         if (localStorage.getItem('geo') == "disabled") {
-            //todo прятать кнопку.
+            $('#locationPicker1').hide();
         }
 
         if (window.self != window.top) {
