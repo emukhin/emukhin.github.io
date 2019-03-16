@@ -188,7 +188,7 @@ const locationPicker_settings = {
         }
     },
     onSet: function (event, inst) {
-        setLocations(inst);
+        setLocations(inst, event.valueText);
     },
     onClear: function (event, inst) {
         $(inst.element).closest('.mbsc-select').attr('title', '');
@@ -196,7 +196,7 @@ const locationPicker_settings = {
     data: getLocationsForCategory('G')
 };
 
-function setLocations(inst) {
+function setLocations(inst, valueText) {
     const values = inst.getVal();
     let tmp = locations.filter(function (e) {
         if (values.indexOf(e.name)>-1 && e.sat === true)
@@ -209,7 +209,7 @@ function setLocations(inst) {
         tmp.push('w6');
         $(inst.element).closest('.location').next('.time').find('[name^=datePicker]').mobiscroll('getInst').option({invalid: tmp});
     }
-    $(inst.element).closest('.mbsc-select').attr('title', event.valueText);
+    $(inst.element).closest('.mbsc-select').attr('title', valueText);
 }
 
 $(function(){
