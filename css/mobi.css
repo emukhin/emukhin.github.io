@@ -142,8 +142,8 @@ a {
 
 @media all and (max-width: 768px) {
     .container {
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 0!important;
+        padding-left: 0!important;
     }
 }
 
