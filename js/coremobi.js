@@ -230,8 +230,8 @@ $(function(){
         });
 
         $("#class").mobiscroll().select({
-            display: 'center',
-            group: true,
+            // display: 'center',
+            // group: true,
             headerText: 'Class to book',
             responsive: {
                 xsmall: { //0px
