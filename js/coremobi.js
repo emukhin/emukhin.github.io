@@ -326,8 +326,8 @@ $(function(){
                                     output.push(filtered_locations[i].name);
                             }
                             if (output.length > 0) {
-                                $('#locationPicker1').mobiscroll('setVal', output);
-                                setLocations($('#locationPicker1').mobiscroll('getInst'));
+                                $('#locationPicker1').mobiscroll('setVal', output.join(', '));
+                                setLocations($('#locationPicker1').mobiscroll('getInst'), output);
                                 $('#locationPicker1').mobiscroll('hide');
                             } else {
                                 disableGeo();
