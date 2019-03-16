@@ -124,6 +124,8 @@ const locations = [
 ];
 const range_settings = {
     calendarScroll: 'vertical',
+    display: 'bottom',
+    animate: 'slideup',
     min: tomorrow,
     showOuterDays: false,
     invalid: off_days,
@@ -150,7 +152,7 @@ const range_settings = {
             breakpoint: 400,
             controls: ['calendar'],
             display: 'bottom',
-            animate: 'slideup',
+            animate: 'slideup'
         },
         large: { //992px
             months: 3,
@@ -164,7 +166,8 @@ const range_settings = {
     }
 };
 const locationPicker_settings = {
-    display: 'center',
+    display: 'bottom',
+    animate: 'slideup',
     group: true,
     buttons: ['set', 'cancel', 'clear'],
     groupLabel: '&nbsp;',
@@ -230,8 +233,9 @@ $(function(){
         });
 
         $("#class").mobiscroll().select({
-            // display: 'center',
-            // group: true,
+            display: 'bottom',
+            animate: 'slideup',
+            group: true,
             headerText: 'Class to book',
             responsive: {
                 xsmall: { //0px
