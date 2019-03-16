@@ -184,7 +184,7 @@ const locationPicker_settings = {
     onMarkupReady: function (event, inst) {
         if (inst.element.id === 'locationPicker1') {
             let container = $(event.target);
-            $("<button id='nearby' class='mbsc-btn mbsc-btn-outline mbsc-control'><b>Pick nearby centres</b><br>less than an hour drive</button>").insertAfter(container.find('.mbsc-sel-filter-cont'));
+            $("<button id='nearby' class='mbsc-btn mbsc-btn-outline mbsc-control'><div></div><b>Pick nearby centres</b><br>less than an hour drive</button>").insertAfter(container.find('.mbsc-sel-filter-cont'));
         }
     },
     onSet: function (event, inst) {
@@ -308,7 +308,8 @@ $(function(){
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    $("#nearby").addClass("disabled");
+                    $("#nearby").prop("disabled", true);
+                    $("#nearby > div").addClass("loader");
                     let my_location = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
