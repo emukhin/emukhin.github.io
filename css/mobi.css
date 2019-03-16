@@ -140,6 +140,13 @@ a {
     }
 }
 
+@media all and (max-width: 768px) {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
 @media all and (max-width: 722px) {
     .no-padding-side {
         padding-right: 0!important;
