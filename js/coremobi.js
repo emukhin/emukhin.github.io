@@ -326,9 +326,11 @@ $(function(){
                                     output.push(filtered_locations[i].name);
                             }
                             if (output.length > 0) {
-                                $('#locationPicker1').mobiscroll('setVal', output.join(', '));
-                                setLocations($('#locationPicker1').mobiscroll('getInst'), output);
-                                $('#locationPicker1').mobiscroll('hide');
+                                const el = $('#locationPicker1');
+                                el.mobiscroll('setVal', output);
+                                setLocations(el.mobiscroll('getInst'), output.join(', '));
+                                el.mobiscroll('refresh');
+                                el.mobiscroll('hide');
                             } else {
                                 disableGeo();
                                 handleLocationError("No DriveTest centres found withing 1 hour drive from your location. Pick your preferred locations manually.");
