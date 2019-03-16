@@ -188,19 +188,7 @@ const locationPicker_settings = {
         }
     },
     onSet: function (event, inst) {
-        const values = inst.getVal();
-        let tmp = locations.filter(function (e) {
-            if (values.indexOf(e.name)>-1 && e.sat === true)
-                return e;
-        });
-        if (tmp.length > 0)
-            $(inst.element).closest('.location').next('.time').find('[name^=datePicker]').mobiscroll('getInst').option({invalid: off_days});
-        else {
-            let tmp = off_days.slice(0);
-            tmp.push('w6');
-            $(inst.element).closest('.location').next('.time').find('[name^=datePicker]').mobiscroll('getInst').option({invalid: tmp});
-        }
-        $(inst.element).closest('.mbsc-select').attr('title', event.valueText);
+        setLocations(inst);
     },
     onClear: function (event, inst) {
         $(inst.element).closest('.mbsc-select').attr('title', '');
@@ -208,6 +196,21 @@ const locationPicker_settings = {
     data: getLocationsForCategory('G')
 };
 
+function setLocations(inst) {
+    const values = inst.getVal();
+    let tmp = locations.filter(function (e) {
+        if (values.indexOf(e.name)>-1 && e.sat === true)
+            return e;
+    });
+    if (tmp.length > 0)
+        $(inst.element).closest('.location').next('.time').find('[name^=datePicker]').mobiscroll('getInst').option({invalid: off_days});
+    else {
+        let tmp = off_days.slice(0);
+        tmp.push('w6');
+        $(inst.element).closest('.location').next('.time').find('[name^=datePicker]').mobiscroll('getInst').option({invalid: tmp});
+    }
+    $(inst.element).closest('.mbsc-select').attr('title', event.valueText);
+}
 
 $(function(){
     saveRefId();
@@ -324,6 +327,7 @@ $(function(){
                             }
                             if (output.length > 0) {
                                 $('#locationPicker1').mobiscroll('setVal', output);
+                                setLocations($('#locationPicker1').mobiscroll('getInst'));
                                 $('#locationPicker1').mobiscroll('hide');
                             } else {
                                 disableGeo();
