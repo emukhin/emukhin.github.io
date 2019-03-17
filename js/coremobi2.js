@@ -156,7 +156,7 @@ $(function(){
             headerText: 'Class to book',
             responsive: {
                 xsmall: {
-                    display: 'bottom',
+                    display: 'top',
                     group: true,
                     animate: 'slideup'
                 },
