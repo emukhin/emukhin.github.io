@@ -1,5 +1,7 @@
 mobiscroll.settings = {
-    theme: 'ios'
+    theme: 'ios',
+    display: 'bottom',
+    animate: 'slideup'
 };
 
 const today = new Date();
