@@ -140,10 +140,6 @@ a {
     }
 }
 
-html {
-    height: 100%;
-}
-
 @media all and (max-width: 768px) {
     .container {
         padding-left: 0!important;
@@ -157,10 +153,6 @@ html {
     }
 }
 
-.site-content-wrapper {
-    padding-left: 0!important;
-    padding-right: 0!important;
-}
 @media all and (max-width: 722px) {
     .no-padding-side {
         padding-right: 0!important;
