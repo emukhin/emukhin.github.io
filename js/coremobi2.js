@@ -184,6 +184,42 @@ $(function(){
                 });
             }
         });
+
+        $("#class2").mobiscroll().select({
+            display: 'bottom',
+            animate: 'slideup',
+            group: true,
+            headerText: 'Class to book',
+            responsive: {
+                xsmall: {
+                    display: 'bottom',
+                    group: true,
+                    animate: 'slideup'
+                },
+                large: {
+                    display: 'center',
+                    animate: 'pop'
+                }
+            },
+            onSet: function (event) {
+                $("#class").val(event.valueText);
+                let category = event.valueText;
+                const locationPicker = '[name^=locationPicker]';
+                let selected = [];
+                $(locationPicker).each(function () {
+                    const selectedValues = $(this).mobiscroll('getInst').getVal();
+                    let tmp = selectedValues.filter(function(e){return selected.indexOf(e)<0});
+                    selected.push.apply(selected, tmp);
+                });
+                let filtered = [];
+                let tmp2 = locations.filter(function(e){return selected.indexOf(e.name)>-1 && e.class.indexOf(category.toLowerCase()) > -1}).map(function(loc) {return loc.name});
+                filtered.push.apply(filtered, tmp2);
+                $(locationPicker).each(function () {
+                    $(this).mobiscroll('getInst').setVal(filtered);
+                    $(this).mobiscroll('getInst').refresh(getLocationsForCategory(category));
+                });
+            }
+        });
     }
 });
 
