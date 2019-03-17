@@ -140,6 +140,10 @@ a {
     }
 }
 
+html {
+    height: 100%;
+}
+
 @media all and (max-width: 768px) {
     .container {
         padding-left: 0!important;
