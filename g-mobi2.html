@@ -36,40 +36,7 @@
 
             <div class="bottom-20">
                 <h1>Want to book your Ontario G road test to an earlier date?</h1>
-                <div id="video">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <div id="youTubePlayer" class="embed-responsive-item"></div>
-                        <script>
-                            const tag = document.createElement('script');
-                            tag.src = "https://www.youtube.com/iframe_api";
-                            const firstScriptTag = document.getElementsByTagName('script')[0];
-                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                            let player;
-                            function onYouTubeIframeAPIReady() {
-                                player = new YT.Player('youTubePlayer', {
-                                    videoId: '6-pPUAOfIU8',
-                                    title: 'Drive Test Booking',
-                                    events: {
-                                        'onStateChange': onPlayerStateChange
-                                    }
-                                });
-                            }
-                            function onPlayerStateChange(event) {
-                                if (event.data == YT.PlayerState.PLAYING) {
-                                    ga('send', 'event', 'Videos', 'Play', 'Video started');
-                                }
 
-                                if (event.data == YT.PlayerState.PAUSED) {
-                                    ga('send', 'event', 'Videos', 'Pause', 'Video paused');
-                                }
-
-                                if (event.data == YT.PlayerState.ENDED) {
-                                    ga('send', 'event', 'Videos', 'Finished', 'Video watched to end');
-                                }
-                            }
-                        </script>
-                    </div>
-                </div>
                 <div id="desc">
                     <p>Many road test centres are fully booked for months in advance. If you need your license sooner, your only hope is to snap up a cancellation when it becomes available. But these openings don't last long, and you can't spend all of your time refreshing the DriveTest.ca appointment finder.</p>
                     <p>Our unique software monitors cancellations in real-time, 24/7. We're constantly searching for openings, day and night, and we book your driver's test appointment the moment a slot that fits your request becomes available.</p>
@@ -87,18 +54,7 @@
                 <br/>
                 <div class="row center">
                     <div class="col-md-7 col-sm-6 col-xs-12 no-padding-side">
-                        <div class="col-sm-6 col-xs-12">
-                            <label>
-                                Driver's Licence Number
-                                <input type="text" name='licenceNumber' id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required autocomplete="off" placeholder="_____-_____-_____" maxlength="17">
-                            </label>
-                        </div>
-                        <div class="col-sm-6 col-xs-6 no-padding-right expiry">
-                            <label>
-                                Driver's Licence Expiry
-                                <input type="tel" name='licenceExpiryDate' id="licenceExpiryDate" pattern="^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]{1}[0-9]{1}|3[0-1])$" required data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD">
-                            </label>
-                        </div>
+
                         <div class="col-sm-4 col-xs-6 class">
                             <label>
                                 Road Test Class
@@ -127,11 +83,7 @@
                                 </select>
                             </label>
                         </div>
-                        <div class="col-sm-8 col-xs-12 email">
-                            <label>Driver's email
-                                <input name='email' id="email" type="email" placeholder="name@email.com" required>
-                            </label>
-                        </div>
+
                     </div>
                     <div class="col-md-5 col-sm-6 col-xs-12 no-padding-side">
                         <ul id="bullets">
@@ -153,146 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="periods">
-                    <div class="row period">
-                        <div class="location">
-                            <label>
-                                Select DriveTest Centre(s)
-                                <select name="locationPicker1" id="locationPicker1" required title="Select DriveTest Centres">
-                                    <optgroup label="Eastern">
-                                        <option category="G2">Arnprior</option>
-                                        <option category="A G G2 M M2 F">Bancroft</option>
-                                        <option category="G2">Barry's Bay</option>
-                                        <option category="A G G2 M M2 F">Belleville</option>
-                                        <option category="A G G2 M M2 F">Brockville</option>
-                                        <option category="G2">Carleton Place</option>
-                                        <option category="G2">Casselman</option>
-                                        <option category="A G G2 M M2 F">Cornwall</option>
-                                        <option category="A G G2 M M2 F">Hawkesbury</option>
-                                        <option category="G2">Kemptville</option>
-                                        <option category="A G G2 M M2 F">Kingston</option>
-                                        <option category="A G G2 M M2 F">Lindsay</option>
-                                        <option category="G2">Madoc</option>
-                                        <option category="G G2">Ottawa Canotek</option>
-                                        <option category="A G G2 M M2 F">Ottawa Walkley</option>
-                                        <option category="A G G2 M F">Pembroke</option>
-                                        <option category="A G G2 M M2 F">Peterborough</option>
-                                        <option category="G G2">Port Hope</option>
-                                        <option category="A G G2 M M2 F">Renfrew</option>
-                                        <option category="G2">Rockland</option>
-                                        <option category="A G G2 M M2 F">Smiths Falls</option>
-                                        <option category="G2">Westport</option>
-                                        <option category="G2">Winchester</option>
-                                    </optgroup>
-                                    <optgroup label="Northern">
-                                        <option category="A G2 F">Atikokan</option>
-                                        <option category="A G G2 M M2 F">Blind River</option>
-                                        <option category="A G2 F">Chapleau</option>
-                                        <option category="A G2 F">Cochrane</option>
-                                        <option category="A G G2 M M2 F">Dryden</option>
-                                        <option category="G2 F">Dubreuilville</option>
-                                        <option category="G2">Ear Falls</option>
-                                        <option category="A G G2 M M2 F">Elliott Lake</option>
-                                        <option category="A G G2 M M2 F">Espanola</option>
-                                        <option category="A G G2 M M2 F">Fort Frances</option>
-                                        <option category="A G2 M2 F">Geraldton</option>
-                                        <option category="G2 M2 F">Haliburton</option>
-                                        <option category="A G G2 M M2 F">Hearst</option>
-                                        <option category="G2 F">Hornepayne</option>
-                                        <option category="A G G2 M M2 F">Huntsville</option>
-                                        <option category="G2">Ignace</option>
-                                        <option category="A G G2 M M2 F">Kapuskasing</option>
-                                        <option category="A G G2 M M2 F">Kenora</option>
-                                        <option category="A G G2 M M2 F">Kirkland Lake</option>
-                                        <option category="A G2 M2 F">Little Current</option>
-                                        <option category="A G2 M2 F">Manitouwadge</option>
-                                        <option category="A G G2 M M2 F">Marathon</option>
-                                        <option category="G2 F">Mattawa</option>
-                                        <option category="A G G2 F">Moosonee</option>
-                                        <option category="A G G2 M M2 F">New Liskeard</option>
-                                        <option category="A G2 M2 F">Nipigon</option>
-                                        <option category="A G G2 M M2 F">North Bay</option>
-                                        <option category="A G G2 M M2 F">Parry Sound</option>
-                                        <option category="A G2 F">Pickle Lake</option>
-                                        <option category="G2">Rainy River</option>
-                                        <option category="A G2 F">Red Lake</option>
-                                        <option category="A G G2 M M2 F">Sault Ste Marie</option>
-                                        <option category="A G2 M2 F">Schreiber</option>
-                                        <option category="G2">Sioux Lookout</option>
-                                        <option category="A G G2 M M2 F">Sudbury</option>
-                                        <option category="G2 F">Sundridge</option>
-                                        <option category="G2 F">Thessalon</option>
-                                        <option category="A G G2 M M2 F">Thunder Bay</option>
-                                        <option category="A G G2 M M2 F">Timmins</option>
-                                        <option category="A G G2 M M2 F">Wawa</option>
-                                        <option category="G2 F">White River</option>
-                                    </optgroup>
-                                    <optgroup label="Western">
-                                        <option category="A G G2 M M2 F">Barrie</option>
-                                        <option category="A G G2 M2 F">Clinton</option>
-                                        <option category="G G2">Collingwood</option>
-                                        <option category="A G G2 M M2 F">Guelph</option>
-                                        <option category="A G G2 M M2 F">Kitchener</option>
-                                        <option category="A G G2 M2 F">Orangeville</option>
-                                        <option category="A G G2 M M2 F">Orillia</option>
-                                        <option category="A G G2 M M2 F">Owen Sound</option>
-                                        <option category="G G2 M2 F">Stratford</option>
-                                        <option category="A G G2 M M2 F">Walkerton</option>
-                                        <option category="A G G2 M2 F">Woodstock</option>
-                                    </optgroup>
-                                    <optgroup label="Central">
-                                        <option category="A G G2 M M2 F">Brampton</option>
-                                        <option category="A G G2 M M2 F">Burlington</option>
-                                        <option category="A G G2 M M2 F">Mississauga</option>
-                                        <option category="A G G2 M M2 F">Newmarket</option>
-                                        <option category="G G2">Oakville</option>
-                                        <option category="A G G2 M M2 F">Oshawa</option>
-                                        <option category="A G G2 M F">Toronto Downsview</option>
-                                        <option category="G G2">Toronto Etobicoke</option>
-                                        <option category="G G2 M M2">Toronto Metro East</option>
-                                        <option category="G G2">Toronto Port Union</option>
-                                    </optgroup>
-                                    <optgroup label="Southern">
-                                        <option category="A G G2 M M2 F">Brantford</option>
-                                        <option category="A G G2 M M2 F">Chatham</option>
-                                        <option category="A G G2 M M2 F">Hamilton</option>
-                                        <option category="G2">Leamington</option>
-                                        <option category="A G G2 M M2 F">London</option>
-                                        <option category="A G G2 M2 F">Sarnia</option>
-                                        <option category="A G G2 M2 F">Simcoe</option>
-                                        <option category="A G G2 M M2 F">St Catharines</option>
-                                        <option category="A G G2 M2 F">Tillsonburg</option>
-                                        <option category="A G G2 M M2 F">Windsor</option>
-                                    </optgroup>
-                                </select>
-                            </label>
-                        </div>
-                        <div class="time">
-                            <div class="from no-margin-left">
-                                <label>Select date range
-                                    <input name='datePicker1' id='datePicker1' type="text" required>
-                                </label>
-                            </div>
-                            <div class="add-remove">
-                                <button id="addPeriod" type="button" class="margin-left-15 mbsc-btn-light" data-icon="arrow-down5" title="Add another period"></button>
-                                <button id="removePeriod" type="button" class="margin-left hidden mbsc-btn-light" data-icon="arrow-up5" title="Remove period"></button>
 
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="period-popup">
-                        <p>Add periods for non-consequent date ranges.</p>
-                        <p>e.g. for Mondays in March you'll need 4 periods:</p>
-                        <div class="text-center">
-                            <p>03/04/2019 - 03/04/2019</p>
-                            <p>03/11/2019 - 03/11/2019</p>
-                            <p>03/18/2019 - 03/18/2019</p>
-                            <p>03/25/2019 - 03/25/2019</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="row bottom-20 top-30">
                     <div class="checkbox small text-center">
                         <span>By submitting, I agree to the <a href="terms-of-use" target="_blank">terms of use</a></span>
@@ -465,6 +278,6 @@
 <script src="js/mobiscroll.jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCseUybif0zanq_J0R1148bWZKJnZBeiuo" type="text/javascript"></script>
-<script src="js/coremobi2.js?v=111"></script>
+<script src="js/coremobi2.js?v=112"></script>
 </body>
 </html>

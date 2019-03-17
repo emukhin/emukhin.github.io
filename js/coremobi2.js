@@ -182,7 +182,7 @@ $(function(){
                     $(this).mobiscroll('getInst').setVal(filtered);
                     $(this).mobiscroll('getInst').refresh(getLocationsForCategory(category));
                 });
-            },
+            }
         });
     }
 });
