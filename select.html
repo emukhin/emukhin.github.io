@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>Basic usage</title>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.jquery.min.css">
+    <script src="js/mobiscroll.jquery.min.js"></script>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        background: #5185a8;
+        color: #fff;
+        text-decoration: none;
+        font-family: arial, verdana, sans-serif;
+        font-size: 14px;
+    }
+    .demo-non-form {
+        color: initial;
+        width: 100%;
+        padding: 10px;
+        margin: 6px 0 12px 0;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        font-family: arial, verdana, sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+    }
+    
+    .demo-container {
+        padding: 0 1em;
+    }
+    
+    .external-container {
+        display: flex;
+    }
+    
+    .external-container button.external-button {
+        font-weight: 400;
+        padding: 10px;
+        margin: 6px 0 12px 16px;
+    }
+    </style>
+
+</head>
+<body>
+
+<div mbsc-page class="demo-basic">
+    <div mbsc-form>
+        <div class="mbsc-align-center">
+            <div class="mbsc-note mbsc-note-primary">The select can be used inside a mobiscroll form or on any element.</div>
+        </div>
+        <div class="mbsc-form-group">
+            <div class="mbsc-form-group-title">Inside Mobiscroll Form</div>
+            <label>
+                Select
+                <select name="City" id="demo">
+                    <option value="1">Atlanta</option>
+                    <option value="2">Berlin</option>
+                    <option value="3">Boston</option>
+                    <option value="4">Chicago</option>
+                    <option value="5">London</option>
+                    <option value="6">Los Angeles</option>
+                    <option value="7">New York</option>
+                    <option value="8">Paris</option>
+                    <option value="9">San Francisco</option>
+                </select>
+            </label>
+            <label>
+                Header text
+                <select name="City" id="demo-header">
+                    <option value="1">Atlanta</option>
+                    <option value="2">Berlin</option>
+                    <option value="3">Boston</option>
+                    <option value="4">Chicago</option>
+                    <option value="5">London</option>
+                    <option value="6">Los Angeles</option>
+                    <option value="7">New York</option>
+                    <option value="8">Paris</option>
+                    <option value="9">San Francisco</option>
+                </select>
+            </label>
+        </div>
+        <div class="mbsc-form-group mbsc-padding">
+            <p class="mbsc-thin">Use it on any element or non-mobiscroll form.</p>
+        </div>
+    </div>
+    <div class="demo-container">
+        <label for="demo-non-form">Select</label>
+        <select name="City" id="demo-non-form">
+            <option value="1">Atlanta</option>
+            <option value="2">Berlin</option>
+            <option value="3">Boston</option>
+            <option value="4">Chicago</option>
+            <option value="5">London</option>
+            <option value="6">Los Angeles</option>
+            <option value="7">New York</option>
+            <option value="8">Paris</option>
+            <option value="9">San Francisco</option>
+        </select>
+        <label for="demo-external">Show on button click only</label>
+        <div class="external-container">
+            <select name="City" id="demo-external">
+                <option value="1">Atlanta</option>
+                <option value="2">Berlin</option>
+                <option value="3">Boston</option>
+                <option value="4">Chicago</option>
+                <option value="5">London</option>
+                <option value="6">Los Angeles</option>
+                <option value="7">New York</option>
+                <option value="8">Paris</option>
+                <option value="9">San Francisco</option>
+            </select>
+            <button id="show" class="external-button">Show</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    mobiscroll.settings = {
+        theme: 'ios',                     // Specify theme like: theme: 'ios' or omit setting to use default
+            lang: 'en'                    // Specify language like: lang: 'pl' or omit setting to use default
+    };
+    
+    $(function () {
+    
+        // Mobiscroll Select initialization
+        $('#demo').mobiscroll().select({
+            minWidth: 200                 // More info about minWidth: https://docs.mobiscroll.com/4-6-0/select#opt-minWidth
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-header').mobiscroll().select({
+            minWidth: 200,                // More info about minWidth: https://docs.mobiscroll.com/4-6-0/select#opt-minWidth
+            headerText: 'Pick location'   // More info about headerText: https://docs.mobiscroll.com/4-6-0/select#opt-headerText
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-non-form').mobiscroll().select({
+            minWidth: 200,                // More info about minWidth: https://docs.mobiscroll.com/4-6-0/select#opt-minWidth
+            inputClass: 'demo-non-form'   // More info about inputClass: https://docs.mobiscroll.com/4-6-0/select#opt-inputClass
+        });
+    
+        // Mobiscroll Select initialization
+        $('#demo-external').mobiscroll().select({
+            minWidth: 200,                // More info about minWidth: https://docs.mobiscroll.com/4-6-0/select#opt-minWidth
+            inputClass: 'demo-non-form',  // More info about inputClass: https://docs.mobiscroll.com/4-6-0/select#opt-inputClass
+            showOnTap: false,             // More info about showOnTap: https://docs.mobiscroll.com/4-6-0/select#opt-showOnTap
+            showOnFocus: false            // More info about showOnFocus: https://docs.mobiscroll.com/4-6-0/select#opt-showOnFocus
+        });
+    
+        $('#show').click(function () {
+            $('#demo-external').mobiscroll('show');
+            return false;
+        });
+    
+    });
+</script>
+
+</body>
+</html>
