@@ -240,12 +240,12 @@ $(function(){
             group: true,
             headerText: 'Class to book',
             responsive: {
-                xsmall: { //0px
+                xsmall: {
                     display: 'bottom',
-                    group: false,
+                    group: true,
                     animate: 'slideup'
                 },
-                large: { //992px
+                large: {
                     display: 'center',
                     animate: 'pop'
                 }
