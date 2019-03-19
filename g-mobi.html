@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-
     <meta name="description" content="Get your Ontario G road test booked online using our automatic booking 24/7 service. Name the date you'd like to have a road test, we'll take care of the rest.">
     <title>Book G road test | Ontario</title>
     <link rel="alternate" href="https://bookroadtest.ca/" hreflang="x-default" />
@@ -18,7 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="css/common.css?v=9">
     <link href="css/mobiscroll.jquery.min.css" rel="stylesheet" type="text/css">
-    <link href="css/mobi.css?v=8" rel="stylesheet" type="text/css">
+    <link href="css/mobi.css?v=9" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,7 +29,7 @@
 </head>
 <body>
     <a id="checkout" href="payment" class="hidden"><div></div></a>
-    <div class="container" mbsc-page>
+    <div class="container">
         <div class="shadow">
             <div class="hidden-xs">
                 <div class="head-left"></div>
@@ -38,9 +37,32 @@
                 <div class="head-middle"></div>
             </div>
             <div class="site-content-wrapper">
-
+                <nav class="navbar navbar-default navbar-static-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-logo hidden-lg hidden-md hidden-sm">
+                                <img alt="Brand" src="images/logo.png" width="35">
+                                <b class="margin-left">Book a Road Test</b>
+                            </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="g1-knowledge-test" title="Knowledge Test (G1)">Knowledge Test</a></li>
+                                <li class="active"><a href="#" title="Book a Driving Test (G2, G, A etc.)">Book a Road Test</a></li>
+                                <li><a href="how-it-works" title="How it Works">How It Works</a></li>
+                                <li><a href="faq" title="FAQs">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
                 <div class="bottom-20">
-                    <h1>Want to book your Ontario GG road test to an earlier date?</h1>
+                    <h1>Want to book your Ontario G road test to an earlier date?</h1>
                     <div id="video">
                         <div class="embed-responsive embed-responsive-16by9">
                             <div id="youTubePlayer" class="embed-responsive-item"></div>
@@ -93,20 +115,20 @@
                     <div class="row center">
                         <div class="col-md-7 col-sm-6 col-xs-12 no-padding-side">
                             <div class="col-sm-6 col-xs-12">
-                                <label>
-                                    Driver's Licence Number
+                                <div>
+                                    <label for="licenceNumber">Driver's Licence Number</label>
                                     <input type="text" name='licenceNumber' id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required autocomplete="off" placeholder="_____-_____-_____" maxlength="17">
-                                </label>
+                                </div>
                             </div>
                             <div class="col-sm-6 col-xs-6 no-padding-right expiry">
-                                <label>
-                                    Driver's Licence Expiry
+                                <div>
+                                    <label for="licenceExpiryDate">Driver's Licence Expiry</label>
                                     <input type="tel" name='licenceExpiryDate' id="licenceExpiryDate" pattern="^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]{1}[0-9]{1}|3[0-1])$" required data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD">
-                                </label>
+                                </div>
                             </div>
                             <div class="col-sm-4 col-xs-6 class">
-                                <label>
-                                    Road Test Class
+                                <div>
+                                    <label for="class">Road Test Class</label>
                                     <select id="class">
                                         <optgroup label="Public">
                                             <option>G</option>
@@ -130,12 +152,13 @@
                                             <option>Z</option>
                                         </optgroup>
                                     </select>
-                                </label>
+                                </div>
                             </div>
                             <div class="col-sm-8 col-xs-12 email">
-                                <label>Driver's email
+                                <div>
+                                    <label for="email">Driver's email</label>
                                     <input name='email' id="email" type="email" placeholder="name@email.com" required>
-                                </label>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 no-padding-side">
@@ -161,8 +184,8 @@
                     <div class="periods">
                         <div class="row period">
                             <div class="location">
-                                <label>
-                                    Select DriveTest Centre(s)
+                                <div>
+                                    <label for="locationPicker1">Select DriveTest Centre(s)</label>
                                     <select name="locationPicker1" id="locationPicker1" required title="Select DriveTest Centres">
                                     <optgroup label="Eastern">
                                         <option category="G2">Arnprior</option>
@@ -197,7 +220,6 @@
                                         <option category="A G G2 M M2 F">Dryden</option>
                                         <option category="G2 F">Dubreuilville</option>
                                         <option category="G2">Ear Falls</option>
-                                        <option category="A G G2 M M2 F">Elliott Lake</option>
                                         <option category="A G G2 M M2 F">Espanola</option>
                                         <option category="A G G2 M M2 F">Fort Frances</option>
                                         <option category="A G2 M2 F">Geraldton</option>
@@ -270,22 +292,20 @@
                                         <option category="A G G2 M M2 F">Windsor</option>
                                     </optgroup>
                                 </select>
-                                </label>
+                                </div>
                             </div>
                             <div class="time">
                                 <div class="from no-margin-left">
-                                    <label>Select date range
+                                    <div>
+                                        <label for="datePicker1">Select date range</label>
                                         <input name='datePicker1' id='datePicker1' type="text" required>
-                                    </label>
+                                    </div>
                                 </div>
                                 <div class="add-remove">
                                     <button id="addPeriod" type="button" class="margin-left-15 mbsc-btn-light" data-icon="arrow-down5" title="Add another period"></button>
                                     <button id="removePeriod" type="button" class="margin-left hidden mbsc-btn-light" data-icon="arrow-up5" title="Remove period"></button>
-
                                 </div>
-
                             </div>
-
                         </div>
                         <div class="period-popup">
                             <p>Add periods for non-consequent date ranges.</p>
