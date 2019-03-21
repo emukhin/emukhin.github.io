@@ -64,46 +64,6 @@
                 </nav>
                 <div class="bottom-20">
                     <h1>Want to book your Ontario G road test to an earlier date?</h1>
-                    <div id="video">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <div id="youTubePlayer" class="embed-responsive-item"></div>
-                            <script>
-                                var tag = document.createElement('script');
-                                tag.src = "https://www.youtube.com/iframe_api";
-                                var firstScriptTag = document.getElementsByTagName('script')[0];
-                                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                                var player;
-                                function onYouTubeIframeAPIReady() {
-                                    player = new YT.Player('youTubePlayer', {
-                                        videoId: '6-pPUAOfIU8',
-                                        title: 'Drive Test Booking',
-                                        events: {
-                                            'onReady': onPlayerReady,
-                                            'onStateChange': onPlayerStateChange
-                                        }
-                                    });
-                                }
-
-                                function onPlayerReady(event) {
-                                }
-
-                                function onPlayerStateChange(event) {
-                                    if (event.data == YT.PlayerState.PLAYING) {
-                                        ga('send', 'event', 'Videos', 'Play', 'Video started');
-                                    }
-
-                                    if (event.data == YT.PlayerState.PAUSED) {
-                                        ga('send', 'event', 'Videos', 'Pause', 'Video paused');
-                                    }
-
-                                    if (event.data == YT.PlayerState.ENDED) {
-                                        ga('send', 'event', 'Videos', 'Finished', 'Video watched to end');
-                                    }
-                                }
-                            </script>
-                        </div>
-                    </div>
                     <div id="desc">
                         <p>Many road test centres are fully booked for months in advance. If you need your license sooner, your only hope is to snap up a cancellation when it becomes available. But these openings don't last long, and you can't spend all of your time refreshing the DriveTest.ca appointment finder.</p>
                         <p>Our unique software monitors cancellations in real-time, 24/7. We're constantly searching for openings, day and night, and we book your driver's test appointment the moment a slot that fits your request becomes available.</p>

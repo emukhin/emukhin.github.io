@@ -438,36 +438,5 @@
     <script src="js/core.min.js?v=31"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCseUybif0zanq_J0R1148bWZKJnZBeiuo" type="text/javascript"></script>
     <script async defer src="js/distance.min.js?v=2"></script>
-    <script>
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youTubePlayer', {
-                videoId: '6-pPUAOfIU8',
-                title: 'Drive Test Booking',
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING) {
-                ga('send', 'event', 'Videos', 'Play', 'Video started');
-            }
-
-            if (event.data == YT.PlayerState.PAUSED) {
-                ga('send', 'event', 'Videos', 'Pause', 'Video paused');
-            }
-
-            if (event.data == YT.PlayerState.ENDED) {
-                ga('send', 'event', 'Videos', 'Finished', 'Video watched to end');
-            }
-        }
-    </script>
 </body>
 </html>
