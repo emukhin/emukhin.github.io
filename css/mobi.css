@@ -2,6 +2,10 @@ input.mbsc-control {
     height: 3em!important;
 }
 
+.mbsc-label {
+    font-size: 16px!important;
+}
+
 .period .mbsc-control-w,  .period .mbsc-control{
     margin-bottom: 0!important;
 }
