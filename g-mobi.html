@@ -29,7 +29,7 @@
 </head>
 <body>
     <a id="checkout" href="payment" class="hidden"><div></div></a>
-    <div class="container" mbsc-page>
+    <div class="container">
         <div class="shadow">
             <div class="hidden-xs">
                 <div class="head-left"></div>
@@ -81,17 +81,20 @@
                     <div class="row center">
                         <div class="col-md-7 col-sm-6 col-xs-12 no-padding-side">
                             <div class="col-sm-6 col-xs-12">
-                                <label>Driver's Licence Number
+                                <div>
+                                    <label>Driver's Licence Number</label>
                                     <input type="text" name='licenceNumber' id="licenceNumber" pattern="^[a-zA-Z]{1}[0-9]{4}[-]?[0-9]{5}[-]?[0-9]{5}$" required autocomplete="off" placeholder="_____-_____-_____" maxlength="17">
-                                </label>
+                                </div>
                             </div>
                             <div class="col-sm-6 col-xs-6 no-padding-right expiry">
-                                <label>Driver's Licence Expiry
+                                <div>
+                                    <label>Driver's Licence Expiry</label>
                                     <input type="tel" name='licenceExpiryDate' id="licenceExpiryDate" pattern="^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]{1}[0-9]{1}|3[0-1])$" required data-suggestions="YYYY-MM-DD" autocomplete="off" placeholder="YYYY-MM-DD">
-                                </label>
+                                </div>
                             </div>
                             <div class="col-sm-4 col-xs-6 class">
-                                <label>Road Test Class
+                                <div>
+                                    <label>Road Test Class</label>
                                     <select id="class">
                                         <optgroup label="Public">
                                             <option>G</option>
@@ -115,12 +118,13 @@
                                             <option>Z</option>
                                         </optgroup>
                                     </select>
-                                </label>
+                                </div>
                             </div>
                             <div class="col-sm-8 col-xs-12 email">
-                                <label>Driver's email
+                                <div>
+                                    <label>Driver's email</label>
                                     <input name='email' id="email" type="email" placeholder="name@email.com" required>
-                                </label>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 no-padding-side">
@@ -146,7 +150,8 @@
                     <div class="periods">
                         <div class="row period">
                             <div class="location">
-                                <label>Select DriveTest Centre(s)
+                                <div>
+                                    <label>Select DriveTest Centre(s)</label>
                                     <select name="locationPicker1" id="locationPicker1" required title="Select DriveTest Centres">
                                         <optgroup label="Eastern">
                                             <option category="G2">Arnprior</option>
@@ -253,13 +258,14 @@
                                             <option category="A G G2 M M2 F">Windsor</option>
                                         </optgroup>
                                     </select>
-                                </label>
+                                </div>
                             </div>
                             <div class="time">
                                 <div class="from no-margin-left">
-                                    <label>Select date range
+                                    <div>
+                                        <label>Select date range</label>
                                         <input name='datePicker1' id='datePicker1' type="text" required>
-                                    </label>
+                                    </div>
                                 </div>
                                 <div class="add-remove">
                                     <button id="addPeriod" type="button" class="margin-left-15 mbsc-btn-light" data-icon="arrow-down5" title="Add another period"></button>
