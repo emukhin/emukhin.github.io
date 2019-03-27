@@ -146,8 +146,7 @@ a {
 
 @media all and (max-width: 768px) {
     .container {
-        padding-left: 0!important;
-        padding-right: 0!important;
+        padding: 0!important;
         margin-left: 0!important;
         margin-right: 0!important;
     }
@@ -157,8 +156,10 @@ a {
     }
 }
 
-@media all and (max-width: 722px) {
+@media all and (max-width: 667px) {
+
     .no-padding-side {
+    //722
         padding-right: 0!important;
         padding-left: 0!important;
     }
@@ -180,7 +181,6 @@ a {
     .col-xs-6.class {
         width: 46%;
     }
-
     .no-margin-left {
         margin-left: 0!important;
     }
