@@ -9,7 +9,7 @@
     <script src="https://www.google.com/recaptcha/api.js?render=6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc"></script>
     <script>
         grecaptcha.ready(function() {
-            grecaptcha.execute('6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc', {action: 'homepage'}).then(function(token) {
+            grecaptcha.execute('6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc', {action: 'driverLogin'}).then(function(token) {
                 sessionStorage.setItem("token", token);
             });
         });
@@ -17,7 +17,7 @@
             let token = sessionStorage.getItem('token');
             $.ajax({
                 type: 'POST',
-                headers: { Accept: "text/javascript; charset=utf-8" },
+                headers: { Accept: "application/json;charset=UTF-8" },
                 cache: false,
                 dataType: 'json',
                 data: {
