@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc"></script>
     <script>
         grecaptcha.ready(function() {
             grecaptcha.execute('6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc', {action: 'homepage'}).then(function(token) {
-                console.log(token);
+                $.ajax({
+                    type: 'POST',
+                    headers: { Accept: "text/javascript; charset=utf-8" },
+                    cache: false,
+                    dataType: 'json',
+                    data: {
+                        token
+                    },
+                    url: "https://api.bookroadtest.ca/myapp/rest/captcha"
+                }).done(function(data) {
+                    console.log('pass');
+                }).fail(function(jqXHR, textStatus, errorThrown ) {
+                    console.log('fail');
+                })
             });
         });
     </script>
-
-</body>
+    </body>
