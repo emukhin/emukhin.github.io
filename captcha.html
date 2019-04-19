@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Lfs_p4UAAAAAAAvDhvcdyPwvQMT8TGE0bebzrBc', {action: 'homepage'}).then(function(token) {
+                console.log(token);
+            });
+        });
+    </script>
+
+</body>
