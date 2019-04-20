@@ -13,11 +13,11 @@
                 sessionStorage.setItem("token", token);
             });
         });
-        $(document).on("click", "#submit", { passive: true }, function () {
+        $(document).on("click", "#submit", function () {
             let token = sessionStorage.getItem('token');
             $.ajax({
                 type: 'POST',
-                headers: { Accept: "text/javascript" },
+                headers: { Accept: "text/javascript; charset=utf-8" },
                 cache: false,
                 dataType: 'json',
                 data: {
