@@ -248,7 +248,7 @@
                                         <label for="dateTimePickerFrom" class="sr-only">From</label>
                                         <input id="dateTimePickerFrom" onfocus="blur()" autocomplete="off" placeholder="from" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select start date">
                                     </div>
-                                    <div class="from" tooltip="28+ days span goes for 25% of the base price" tooltip-position="top" >
+                                    <div class="from">
                                         <label for="dateTimePickerTo" class="sr-only">To</label>
                                         <input id="dateTimePickerTo" onfocus="blur()" autocomplete="off" placeholder="to" required type="text" class="datetimepicker form-control" data-validation-error-msg="You did not select end date">
                                     </div>
@@ -264,18 +264,18 @@
                                 <span>By submitting, I agree to the <a href="terms-of-use" target="_blank">terms of use</a></span>
                             </div>
                             <div class="text-center col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
-                                <button disabled id="submit" type="submit" data-loading-text="Submitting..." class="btn btn-md btn-block btn-primary disabled"><strong>BOOK A ROAD TEST</strong></button>
+                                <button id="submit" type="submit" data-loading-text="Submitting..." class="btn btn-md btn-block btn-primary disabled"><strong>BOOK A ROAD TEST</strong></button>
                             </div>
                         </div>
                     </form>
                     <!--googleoff: all-->
                     <div class="row">
                         <div class="col-xs-12">
-                            <div id="error" class="alert alert-danger" role="alert">
+                            <div id="error" class="alert alert-warning" role="alert">
                                 <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <p class="text-center">All DriveTest locations are closed due to COVID-19.</p>
+                                <p class="text-center">DriveTest centres across the province will reopen on June 22. Bookings are now available.</p>
                             </div>
                             <div id="warning" class="alert alert-warning collapse" role="alert">
                                 <button type="button" class="close" aria-label="Close" onclick="$(this).parent().hide()">
@@ -435,7 +435,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.datetimepicker.full.min.js"></script>
-    <script src="js/core.min.js?v=35"></script>
+    <script src="js/core.min.js?v=36"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCseUybif0zanq_J0R1148bWZKJnZBeiuo" type="text/javascript"></script>
     <script async defer src="js/distance.min.js?v=2"></script>
 </body>
